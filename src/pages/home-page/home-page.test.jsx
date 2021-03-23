@@ -1,41 +1,48 @@
-import HomePage, {mapStateToProps} from './home-page'
+import configureStore from 'redux-mock-store'
+import thunk from 'redux-thunk'
+import {Provider} from 'react-redux'
+import HomePage from './home-page'
+import {markHomePageAsVisited} from '../../actions/mark-home-page'
 
+const mockStore = configureStore([thunk])
 const cb = 'home'
 
+jest.mock('../../actions/mark-home-page', () => ({
+    markHomePageAsVisited: jest.fn(() => ({type: 'script'})),
+}))
+
 describe('HomePage', () => {
-    let props, render
+    let props, render, mockState, store
 
     beforeEach(() => {
-        props = {
-            homePageVisted: true,
-            markAsVisited: jest.fn(),
+        mockState = {
+            app: {
+                homePageVisted: true,
+            },
         }
 
-        render = (changedProps = {}) => mount(<HomePage {...props} {...changedProps} />)
+        store = mockStore(mockState)
+
+        render = (changedProps = {}) => mount(<Provider store={store}><HomePage {...props} {...changedProps} /></Provider>)
     })
 
-    it('renders without crashing', () => {
+    afterEach(() => {
+        jest.clearAllMocks()
+    })
+
+    it('displays if home page has been visited', () => {
         const component = render()
-        expect(component.find(`.${cb}`).length).toEqual(1)
+        expect(component.find(`.${cb}`).text()).toEqual('Long home page!(Footer is below the fold)This page has been marked as visited by Redux.')
     })
 
-    describe('mapStateToProps', () => {
-        [
-            {
-                description: 'undefined props',
-                state: {app: {}},
-                expected: {},
-            },
-            {
-                description: 'populated props',
-                state: {app: {homePageVisted: true}},
-                expected: {visited: true},
-            },
-        ].forEach(test => {
-            it(`correctly maps state to props with ${test.description}`, () => {
-                const result = mapStateToProps(test.state)
-                expect(result).toEqual(test.expected)
-            })
-        })
+    it('displays if home page has not been visited', () => {
+        mockState.app.homePageVisted = false
+        const component = render()
+        expect(component.find(`.${cb}`).text()).toEqual('Long home page!(Footer is below the fold)This page has not been marked as visited by Redux.')
+    })
+
+    it('marks home page as visited on mount', () => {
+        render()
+        expect(markHomePageAsVisited).toHaveBeenCalledTimes(1)
     })
 })

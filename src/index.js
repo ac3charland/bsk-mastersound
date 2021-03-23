@@ -6,7 +6,7 @@ import * as serviceWorker from './serviceWorker'
 import {Route, BrowserRouter as Router, Switch} from 'react-router-dom'
 import NavBar from './components/nav-bar/nav-bar'
 import Footer from './components/footer/footer'
-import {ConnectedHomePage} from './pages/home-page/home-page'
+import HomePage from './pages/home-page/home-page'
 import SecondaryPage from './pages/secondary-page/secondary-page'
 import {NAVBAR_HEIGHT, SECONDARY_PAGE_URL} from './utils/constants'
 import makeStore from './store'
@@ -22,7 +22,7 @@ ReactDOM.render(
           <div className='flex' style={{minHeight: `calc(100vh - ${NAVBAR_HEIGHT + 2}rem)`, marginTop: `${NAVBAR_HEIGHT + 2}rem`}}>
             <div className='page-wrapper'>
               <Switch>
-                <Route exact path='/' component={ConnectedHomePage} />
+                <Route exact path='/' component={HomePage} />
                 <Route exact path={SECONDARY_PAGE_URL} component={SecondaryPage} />
               </Switch>
             </div>
