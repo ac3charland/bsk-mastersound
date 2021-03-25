@@ -1,10 +1,84 @@
 @import "../../globals.scss";
 
 .home {
-  /* CHANGE_ME 
-    This style only exists to demonstrate that the sticky footer 
-    goes below the fold when the content is larger than 100vh.
-    It should be removed.
-  */
-  height: 110rem
+  &__hero-wrapper {
+    width: 100%;
+    position: relative;
+    max-height: 100vh;
+    overflow: hidden;
+  }
+
+  &__hero-image {
+    width: 100%;
+  }
+
+  &__hero-title {
+    position: absolute;
+    left: 0;
+    right: 0;
+    text-align: center;
+    bottom: 5rem;
+    color: white;
+    font-size: 4rem;
+  }
+
+  &__content-wrapper {
+    padding: 2rem 4rem;
+    margin: 0 auto;
+    width: 100%;
+    max-width: $content-width;
+  }
+
+  &__listen-container {
+    display: block;
+    margin: 15rem auto 0;
+    padding: 0;
+    height: 70px;
+
+    &:hover,
+    &:focus {
+      cursor: pointer;
+
+      .home__chevron-container {
+        -ms-transform: translateY(10px); /* IE 9 */
+        -webkit-transform: translateY(10px); /* Safari 3-8 */
+        transform: translateY(10px);
+
+        @include small-screen {
+          -ms-transform: none; /* IE 9 */
+          -webkit-transform: none; /* Safari 3-8 */
+          transform: none;
+        }
+      }
+
+    }
+  }
+
+  &__listen-text {
+    font-size: 4rem;
+    text-align: center;
+    padding-bottom: 0.5rem;
+    transition: font-size 0.3s;
+    -moz-transition: font-size 0.3s; /* Firefox 4 */
+    -webkit-transition: font-size 0.3s;
+    animation: chevronFade ease-in 0.5s;
+    animation-fill-mode: forwards;
+    animation-delay: 3.5s;
+  }
+
+  &__chevron-container {
+    margin: 0 auto;
+    width: 8rem;
+    transition: transform 0.3s;
+    -moz-transition: transform 0.3s; /* Firefox 4 */
+    -webkit-transition: transform 0.3s;
+    animation: chevronFade ease-in 0.5s;
+    animation-fill-mode: forwards;
+    animation-delay: 3.5s;
+  }
+
+  &__chevron {
+    width: 100%;
+    height: auto;
+  }
 }

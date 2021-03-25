@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react'
 import './nav-bar.scss'
 import {SECONDARY_PAGE_URL} from '../../utils/constants'
+import Logo from '../../images/logo.png'
 
 const cb = 'navbar'
 
@@ -27,7 +28,9 @@ const NavBar = () => {
 
     return (
         <div id='nav-bar' className={`${cb} ${navBarActive ? 'active' : ''}`}>
-            <a className={`${cb}__home`} href='/'><h1 className={`${cb}__heading`}>[CHANGE_ME_SITE_TITLE]</h1></a>
+            <a className={`${cb}__home`} href='/'>
+                <img className={`${cb}__logo`} src={Logo} alt='Logo for BSK Mastersound by Bruce Kasprzyk, providing quality audio engineering services' />
+            </a>
             <div className={`${cb}__links ${menuCSS}`}>
                 <button className={`icon ${menuCSS}`} onClick={() => setMenuOpen(!menuOpen)}><i className={`fa ${menuIcon}`}></i></button>
                 <a id={'secondary-link'} className={`${cb}__link ${menuCSS}`} href={SECONDARY_PAGE_URL}>CHANGE_ME SECONDARY_LINK</a>

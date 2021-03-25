@@ -8,7 +8,7 @@ import NavBar from './components/nav-bar/nav-bar'
 import Footer from './components/footer/footer'
 import HomePage from './pages/home-page/home-page'
 import SecondaryPage from './pages/secondary-page/secondary-page'
-import {NAVBAR_HEIGHT, SECONDARY_PAGE_URL} from './utils/constants'
+import {SECONDARY_PAGE_URL} from './utils/constants'
 import makeStore from './store'
 
 const store = makeStore()
@@ -17,9 +17,9 @@ ReactDOM.render(
   <Provider store={store}>
     <React.StrictMode>
       <Router>
-        <div className='content-wrapper' style={{minHeight: `calc(100vh - ${NAVBAR_HEIGHT + 2}rem)`}}>
+        <div className='content-wrapper'>
           <NavBar />
-          <div className='flex' style={{minHeight: `calc(100vh - ${NAVBAR_HEIGHT + 2}rem)`, marginTop: `${NAVBAR_HEIGHT + 2}rem`}}>
+          <div className='flex' >
             <div className='page-wrapper'>
               <Switch>
                 <Route exact path='/' component={HomePage} />
