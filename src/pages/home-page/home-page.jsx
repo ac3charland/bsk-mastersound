@@ -18,7 +18,7 @@ const HomePage = () => {
     return (
         <div className={cb}>
             <div className={`${cb}__hero-wrapper`}>
-                <img className={`${cb}__hero-image`} alt='sucks to be blind' src={Hero} />
+                <img className={`${cb}__hero-image`} alt='Bruce Kasprzk BSK Mastersound Vaccum Tubes' src={Hero} />
                 <div className={`${cb}__hero-title`}>
                     <div>AUDIO ENGINEERING | AUDIO EQUIPMENT | AUDIO TRANSFER</div>
                     <button className={`${cb}__listen-container`} onClick={() => ({})}>
