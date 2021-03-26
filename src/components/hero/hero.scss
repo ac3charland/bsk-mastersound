@@ -1,0 +1,94 @@
+@import "../../globals.scss";
+
+.hero {
+    &__wrapper {
+        width: 100%;
+        position: relative;
+        max-height: 100vh;
+        overflow: hidden;
+    }
+
+    &__image {
+        width: 100%;
+    }
+
+    &__title {
+        position: absolute;
+        left: 0;
+        right: 0;
+        text-align: right;
+        bottom: 5rem;
+        color: white;
+        font-size: 7rem;
+    }
+
+    &__slideshow-wrapper {
+        display: flex;
+        justify-content: center;
+
+        div {
+            flex: 1;
+        }
+    }
+
+    &__current-word {
+        @include transform(rotateX(0deg));
+        opacity: 1;
+
+        &-transition {
+            @include transform(rotateX(90deg));
+            opacity: 0;
+        }
+    }
+
+    &__next-word {
+        @include transform(rotateX(90deg));
+
+        &-transition {
+            @include transform(rotateX(0deg));
+        }
+    }
+
+    &__variable-word-container {
+        text-align: left;
+
+        &-transition {
+            text-align: left;
+            @include transform(translateY(-8.4rem));
+        }
+    }
+
+    &__button {
+        display: block;
+        margin: 15rem auto 0;
+        padding: 0;
+        height: 70px;
+
+        &:hover,
+        &:focus {
+            cursor: pointer;
+
+            .hero__chevron-container {
+                @include transform(translateY(7px) scale(1.1));
+
+                @include small-screen {
+                    @include transform(none);
+                }
+            }
+        }
+    }
+
+    &__chevron-container {
+        margin: 0 auto;
+        width: 8rem;
+        @include transition(transform 0.3s);
+        animation: chevronFade ease-in 0.5s;
+        animation-fill-mode: forwards;
+        animation-delay: 3.5s;
+    }
+
+    &__chevron {
+        width: 100%;
+        height: auto;
+    }
+}

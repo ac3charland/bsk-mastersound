@@ -69,6 +69,14 @@ $link-hover-color: darkgray;
   transition: $args;
 }
 
+@mixin transform($args...) {
+  -webkit-transform: $args;
+  -moz-transform: $args;
+  -ms-transform: $args;
+  -o-transform: $args;
+  transform: $args;
+}
+
 @include keyframes(fadeInFromNone) {
     0% {
         display: none;
