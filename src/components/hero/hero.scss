@@ -25,6 +25,7 @@
     &__slideshow-wrapper {
         display: flex;
         justify-content: center;
+        font-weight: 900;
 
         div {
             flex: 1;
@@ -51,8 +52,10 @@
 
     &__variable-word-container {
         text-align: left;
-
+        font-weight: 100;
+        
         &-transition {
+            font-weight: 100;
             text-align: left;
             @include transform(translateY(-8.4rem));
         }

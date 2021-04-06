@@ -4,7 +4,6 @@ import ChevronDown from '../../images/chevrondown.png'
 import './hero.scss'
 
 const cb = 'hero'
-let slideShow
 const words = ['ENGINEERING', 'EQUIPMENT', 'TRANSFER', 'RECORDING', 'MIXING', 'MASTERING', 'RESTORATION']
 const animationSpeed = 400
 const defaultTransition = `${animationSpeed}ms cubic-bezier(0.455, 0.03, 0.515, 0.955)`
@@ -33,7 +32,7 @@ const Hero = () => {
 
     useEffect(() => {
         const runSlideShow = () => {
-            slideShow = setInterval(startTransition, 3000)
+            setInterval(startTransition, 3000)
         }
 
         runSlideShow()
