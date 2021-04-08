@@ -2,6 +2,7 @@ import React, {useState, useEffect, useRef} from 'react'
 import HeroImage from '../../images/hero.jpg'
 import ChevronDown from '../../images/chevrondown.png'
 import './hero.scss'
+import {BIO_SECTION_ID} from '../../utils/constants'
 
 const cb = 'hero'
 const words = ['ENGINEERING', 'EQUIPMENT', 'TRANSFER', 'RECORDING', 'MIXING', 'MASTERING', 'RESTORATION']
@@ -58,7 +59,7 @@ const Hero = () => {
                         <div className={`${cb}__next-word${transitioning ? '-transition' : ''}`} style={{transition}}>{words[nextIndex]}</div>
                     </div>
                 </div>
-                <button className={`${cb}__button`} onClick={() => ({})}>
+                <button className={`${cb}__button`} onClick={scrollToBio}>
                     <div className={`${cb}__chevron-container`}>
                         <img className={`${cb}__chevron`} alt='' src={ChevronDown} />
                     </div>
@@ -66,6 +67,14 @@ const Hero = () => {
             </div>
         </div>
     )
+}
+
+const scrollToBio = () => {
+    const bioSection = document.getElementById(BIO_SECTION_ID)
+    if (bioSection) {
+        bioSection.scrollIntoView({behavior: 'smooth'})
+        setTimeout(() => (bioSection.focus()), 1500)
+    }
 }
 
 export default Hero

@@ -8,11 +8,8 @@ const cb = 'home'
 const HomePage = () => {
     return (
         <div className={cb}>
-            <Hero/>
-            <div className={`${cb}__content-wrapper`}>
-                <Bio/>
-            </div>
-
+            <Hero />
+            <Bio />
         </div>
     )
 }
