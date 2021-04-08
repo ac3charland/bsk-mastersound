@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom'
 import {Provider} from 'react-redux'
 import './index.scss'
 import * as serviceWorker from './serviceWorker'
+import smoothscroll from 'smoothscroll-polyfill'
 import {Route, BrowserRouter as Router, Switch} from 'react-router-dom'
 import NavBar from './components/nav-bar/nav-bar'
 import Footer from './components/footer/footer'
@@ -12,6 +13,7 @@ import {SECONDARY_PAGE_URL} from './utils/constants'
 import makeStore from './store'
 
 const store = makeStore()
+smoothscroll.polyfill()
 
 ReactDOM.render(
   <Provider store={store}>
