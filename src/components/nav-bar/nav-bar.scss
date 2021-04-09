@@ -26,13 +26,9 @@
       width: auto;
     }
 
-    .navbar__links {
-      align-items: center;
-    }
-
     .navbar__link {
       color: $link-color;
-      padding-top: 2rem;
+      margin-top: 0;
 
       &:hover {
         color: $link-hover-color;
@@ -78,11 +74,12 @@
 
   &__links {
     display: flex;
-    align-items: flex-start;
+    align-items: center;
   }
 
   &__link {
-    padding: 2.8rem 0 2rem;
+    margin-top: -3rem;
+    padding: 2rem 0;
     margin-left: 3rem;
     font-size: $font-size-large;
     color: white;
@@ -92,7 +89,7 @@
       color: lightgray;
     }
 
-    @include transition(padding 0.2s, color 0.18s);
+    @include transition(margin-top 0.2s, color 0.18s);
   }
 
   .icon {
