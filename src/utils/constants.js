@@ -1,5 +1,9 @@
 export const SECONDARY_PAGE_URL = '/secondary'
 
+// External URLs
+
+export const ALEX_PORTFOLIO_URL = 'https://www.alexcharland.com/'
+
 // Section IDs
 export const BIO_SECTION_ID = 'BIO_SECTION_ID'
 
