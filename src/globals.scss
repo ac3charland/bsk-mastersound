@@ -77,19 +77,24 @@ $link-hover-color: darkgray;
   transform: $args;
 }
 
-@include keyframes(fadeInFromNone) {
+@include keyframes(doubleBounce) {
     0% {
-        display: none;
-        opacity: 0;
+        @include transform(translateY(0));
     }
 
-    1% {
-        display: block;
-        opacity: 0;
+    25% {
+        @include transform(translateY(10px));
+    }
+
+    50% {
+        @include transform(translateY(0));
+    }
+
+    75% {
+        @include transform(translateY(10px));
     }
 
     100% {
-        display: block;
-        opacity: 1;
+        @include transform(translateY(0));
     }
 }

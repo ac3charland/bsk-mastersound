@@ -77,7 +77,8 @@
             cursor: pointer;
 
             .hero__chevron-container {
-                @include transform(translateY(7px) scale(1.2));
+                animation: doubleBounce ease-in-out 0.45s;
+                animation-fill-mode: forwards;
 
                 @include small-screen {
                     @include transform(none);

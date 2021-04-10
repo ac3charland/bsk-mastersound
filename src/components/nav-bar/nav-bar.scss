@@ -61,15 +61,20 @@
 
   &__company-name {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    align-items: center;
     font-size: $font-size-h5;
     font-weight: 900;
     opacity: 0;
     white-space: nowrap;
     width: 0;
+    overflow: hidden;
 
     @include transition(opacity 0.2s, padding 0.2s);
+  }
+
+  &__mastersound {
+    font-weight: 600;
+    margin-left: 0.6rem;
   }
 
   &__links {
@@ -78,7 +83,7 @@
   }
 
   &__link {
-    margin-top: -3rem;
+    margin-top: -4rem;
     padding: 2rem 0;
     margin-left: 3rem;
     font-size: $font-size-large;

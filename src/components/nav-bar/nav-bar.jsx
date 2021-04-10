@@ -30,7 +30,7 @@ const NavBar = () => {
         <div id='nav-bar' className={`${cb} ${navBarActive ? 'active' : ''}`}>
             <a className={`${cb}__home`} href='/'>
                 <img className={`${cb}__logo`} src={Logo} alt='Logo for BSK Mastersound by Bruce Kasprzyk, providing quality audio engineering services' />
-                <h1 className={`${cb}__company-name`}>BSK MASTERSOUND</h1>
+                <h1 className={`${cb}__company-name`}>BSK <span className={`${cb}__mastersound`}>MASTERSOUND</span></h1>
             </a>
             <div className={`${cb}__links ${menuCSS}`}>
                 <button className={`icon ${menuCSS}`} onClick={() => setMenuOpen(!menuOpen)}><i className={`fa ${menuIcon}`}></i></button>
