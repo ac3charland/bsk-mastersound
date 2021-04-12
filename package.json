@@ -23,6 +23,7 @@
     "jest": "react-scripts test --watchAll=false",
     "eject": "react-scripts eject",
     "lint": "eslint --ext .jsx --ext .js src cypress",
+    "lint:fix": "eslint --ext .jsx --ext .js src cypress --fix",
     "cypress:open": "sh cypress/run-cypress.sh case:open",
     "cypress:test": "sh cypress/run-cypress.sh",
     "cypress:approve": "sh cypress/run-cypress.sh case:approve",

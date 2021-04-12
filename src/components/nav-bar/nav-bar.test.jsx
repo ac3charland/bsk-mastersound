@@ -1,14 +1,25 @@
 import NavBar from './nav-bar'
+import {Provider} from 'react-redux'
+import configureStore from 'redux-mock-store'
+import thunk from 'redux-thunk'
 
 const cb = 'navbar'
+const mockStore = configureStore([thunk])
 
 describe('NavBar', () => {
-    let props, render
+    let props, render, mockState, store
 
     beforeEach(() => {
         props = {}
+        mockState = {
+            scroll: {
+                isBelowScrollThreshold: true,
+            },
+        }
 
-        render = (changedProps = {}) => mount(<NavBar {...props} {...changedProps} />)
+        store = mockStore(mockState)
+
+        render = (changedProps = {}) => mount(<Provider store={store}><NavBar {...props} {...changedProps} /></Provider>)
     })
 
     it('renders without crashing', () => {
