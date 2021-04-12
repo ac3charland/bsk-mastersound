@@ -1,6 +1,8 @@
 @import "../../globals.scss";
 
 .hero {
+    $chevron-width: 8rem;
+
     &__wrapper {
         width: 100%;
         position: relative;
@@ -20,7 +22,7 @@
         bottom: 5rem;
         color: white;
     }
-    
+
     &__slideshow-wrapper {
         display: flex;
         justify-content: center;
@@ -58,7 +60,7 @@
     &__variable-word-container {
         text-align: left;
         font-weight: 100;
-        
+
         &-transition {
             font-weight: 100;
             text-align: left;
@@ -71,12 +73,21 @@
         margin: 0 auto;
         padding: 0;
         height: 70px;
+        opacity: 1;
+        width: $chevron-width;
+        overflow: hidden;
+        @include transition(opacity 0.3s, width 0.3s);
+
+        &-hidden {
+            opacity: 0;
+            width: 0;
+        }
 
         &:hover,
         &:focus {
             cursor: pointer;
 
-            .hero__chevron-container {
+            .hero__chevron{
                 animation: doubleBounce ease-in-out 0.45s;
                 animation-fill-mode: forwards;
 
@@ -89,15 +100,14 @@
 
     &__chevron-container {
         margin: 0 auto;
-        width: 8rem;
+        width: $chevron-width;
         @include transition(transform 0.3s);
-        animation: chevronFade ease-in 0.5s;
-        animation-fill-mode: forwards;
-        animation-delay: 3.5s;
+        @include transform(translateX(-50%));
+        margin-left: 50%;
     }
 
     &__chevron {
-        width: 100%;
+        width: $chevron-width;
         height: auto;
     }
 }

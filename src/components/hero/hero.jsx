@@ -1,4 +1,5 @@
 import React, {useState, useEffect, useRef} from 'react'
+import {useSelector} from 'react-redux'
 import HeroImage from '../../images/hero.jpg'
 import ChevronDown from '../../images/chevrondown.png'
 import './hero.scss'
@@ -13,6 +14,7 @@ const Hero = () => {
     const [index, setIndex] = useState(0)
     const [nextIndex, setNextIndex] = useState(index + 1)
     const [transitioning, setTransitioning] = useState(false)
+    const shouldHideChevron = useSelector(state => state.scroll.isBelowScrollThreshold)
     const nextIndexRef = useRef(nextIndex)
     nextIndexRef.current = nextIndex
 
@@ -45,6 +47,10 @@ const Hero = () => {
         }
     }, [index])
 
+    useEffect(() => {
+
+    })
+
     const transition = transitioning ? defaultTransition : 'none'
 
 
@@ -59,7 +65,7 @@ const Hero = () => {
                         <div className={`${cb}__next-word${transitioning ? '-transition' : ''}`} style={{transition}}>{words[nextIndex]}</div>
                     </div>
                 </div>
-                <button className={`${cb}__button`} onClick={scrollToBio}>
+                <button className={`${cb}__button ${shouldHideChevron ? `${cb}__button-hidden` : ''}`} onClick={scrollToBio}>
                     <div className={`${cb}__chevron-container`}>
                         <img className={`${cb}__chevron`} alt='' src={ChevronDown} />
                     </div>
@@ -73,7 +79,7 @@ const scrollToBio = () => {
     const bioSection = document.getElementById(BIO_SECTION_ID)
     if (bioSection) {
         bioSection.scrollIntoView({behavior: 'smooth'})
-        setTimeout(() => (bioSection.focus()), 1500)
+        setTimeout(() => (bioSection.focus()), 500)
     }
 }
 
