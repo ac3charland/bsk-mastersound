@@ -4,6 +4,7 @@ import HeroImage from '../../images/hero.jpg'
 import ChevronDown from '../../images/chevrondown.png'
 import './hero.scss'
 import {BIO_SECTION_ID} from '../../utils/constants'
+import {getIsBelowScrollThreshold} from '../../selectors/app'
 
 const cb = 'hero'
 const words = ['ENGINEERING', 'EQUIPMENT', 'TRANSFER', 'RECORDING', 'MIXING', 'MASTERING', 'RESTORATION']
@@ -14,7 +15,7 @@ const Hero = () => {
     const [index, setIndex] = useState(0)
     const [nextIndex, setNextIndex] = useState(index + 1)
     const [transitioning, setTransitioning] = useState(false)
-    const shouldHideChevron = useSelector(state => state.scroll.isBelowScrollThreshold)
+    const shouldHideChevron = useSelector(getIsBelowScrollThreshold)
     const nextIndexRef = useRef(nextIndex)
     nextIndexRef.current = nextIndex
 

@@ -65,11 +65,11 @@
         background-image: url('/svgs/mixer.svg');
         width: 40rem;
         height: 25rem;
-        bottom: 14rem;
+        bottom: calc(40% - 16rem);
         left: -20rem;
 
         @include small-screen {
-            bottom: 50%;
+            bottom: 40%;
             @include transform(scaleX(-1));
         }
     }
