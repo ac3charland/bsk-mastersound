@@ -27,23 +27,22 @@ const App = () => {
     }, [isBelowScrollThreshold])
 
     return (
-        
-            <React.StrictMode>
-                <Router>
-                    <div className='content-wrapper'>
-                        <NavBar />
-                        <div className='flex' >
-                            <div className='page-wrapper'>
-                                <Switch>
-                                    <Route exact path='/' component={HomePage} />
-                                    <Route exact path={SECONDARY_PAGE_URL} component={SecondaryPage} />
-                                </Switch>
-                            </div>
-                            <Footer />
+        <React.StrictMode>
+            <Router>
+                <div className='content-wrapper'>
+                    <NavBar />
+                    <div className='flex' >
+                        <div className='page-wrapper'>
+                            <Switch>
+                                <Route exact path='/' component={HomePage} />
+                                <Route exact path={SECONDARY_PAGE_URL} component={SecondaryPage} />
+                            </Switch>
                         </div>
+                        <Footer />
                     </div>
-                </Router>
-            </React.StrictMode>
+                </div>
+            </Router>
+        </React.StrictMode>
     )
 }
 

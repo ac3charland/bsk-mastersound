@@ -20,7 +20,7 @@ const NavBar = () => {
             </a>
             <div className={`${cb}__links ${menuCSS}`}>
                 <button className={`icon ${menuCSS}`} onClick={() => setMenuOpen(!menuOpen)}><i className={`fa ${menuIcon}`}></i></button>
-                <a id={'secondary-link'} className={`${cb}__link ${menuCSS}`} href={SECONDARY_PAGE_URL}>CHANGE_ME SECONDARY_LINK</a>
+                <a id={'secondary-link'} className={`${cb}__link ${menuCSS}`} href={SECONDARY_PAGE_URL}>SECONDARY</a>
             </div>
         </div>
     )

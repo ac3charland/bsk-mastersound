@@ -2,8 +2,9 @@
 
 .hero {
     $chevron-width: 8rem;
-
+    
     &__wrapper {
+        background-color: $gray-primary-color;
         width: 100%;
         position: relative;
         max-height: 100vh;
@@ -64,7 +65,12 @@
         &-transition {
             font-weight: 100;
             text-align: left;
-            @include transform(translateY(-8.4rem));
+            // Causing imprecision
+            @include transform(translateY(calc(-2.5rem - 4vw)));
+
+            @include small-screen {
+                @include transform(translateY(calc(-1 * #{$font-size-h3} - 0.5rem)))
+            }
         }
     }
 

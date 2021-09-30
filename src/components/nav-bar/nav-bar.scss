@@ -7,17 +7,22 @@
   margin: 0 auto;
   width: 100%;
   box-sizing: border-box;
-  z-index: 2;
+  z-index: 3;
   position: fixed;
   top: 0;
   background-color: transparent;
   @include transition(background-color 0.3s, height 0.1s);
 
   &.active {
-    background-color: white;
+    background-color: $gray-primary-color;
+    border-bottom: 1px solid #888;
 
     .navbar__logo {
       max-height: 5rem;
+
+      @include small-screen {
+        max-height: 4rem;
+      }
     }
 
     .navbar__company-name {
@@ -27,7 +32,7 @@
     }
 
     .navbar__link {
-      color: $link-color;
+      color: $secondary-color;
       margin-top: 0;
 
       &:hover {
@@ -37,7 +42,6 @@
 
     @include small-screen {
       .navbar__link {
-        background-color: $secondary-background-color;
         @include transition(background-color 0.3s);
       }
     }
@@ -56,6 +60,10 @@
   &__logo {
     max-height: 12rem;
 
+    @include small-screen {
+      max-height: 8rem;
+    }
+
     @include transition(max-height 0.2s);
   }
 
@@ -70,11 +78,21 @@
     overflow: hidden;
 
     @include transition(opacity 0.2s, padding 0.2s);
+
+    @include small-screen {
+      font-size: $font-size-h6;
+      flex-direction: column;
+      align-items: flex-start;
+    }
   }
 
   &__mastersound {
     font-weight: 600;
     margin-left: 0.6rem;
+
+    @include small-screen {
+      margin-left: 0;
+    }
   }
 
   &__links {
@@ -89,6 +107,8 @@
     font-size: $font-size-large;
     color: white;
     max-height: $font-size-large;
+    font-weight: 900;
+    text-decoration: none;
 
     &:hover {
       color: lightgray;

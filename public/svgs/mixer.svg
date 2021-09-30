@@ -1,0 +1,666 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="103.19mm"
+   height="72.571mm"
+   version="1.1"
+   viewBox="0 0 103.19 72.571"
+   id="svg1857"
+   sodipodi:docname="mixer.svg"
+   inkscape:version="1.0.2 (e86c8708, 2021-01-15)">
+  <defs
+     id="defs1861" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1622"
+     inkscape:window-height="969"
+     id="namedview1859"
+     showgrid="false"
+     inkscape:zoom="1.7817613"
+     inkscape:cx="195.00473"
+     inkscape:cy="116.15431"
+     inkscape:window-x="0"
+     inkscape:window-y="23"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="g1853" />
+  <metadata
+     id="metadata1673">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     transform="translate(-36.138,-273.65)"
+     id="g1855">
+    <rect
+       x="91.945999"
+       y="54.429001"
+       width="20"
+       height="48"
+       stop-color="#000000"
+       stroke-width="1.0286"
+       id="rect1675" />
+    <rect
+       x="51.945999"
+       y="54.429001"
+       width="20"
+       height="48"
+       fill="#ffffff"
+       stop-color="#000000"
+       id="rect1677" />
+    <g
+       stroke-width="1.0286"
+       id="g1685">
+      <rect
+         x="71.945999"
+         y="54.429001"
+         width="20"
+         height="48"
+         fill="#d2c2aa"
+         stop-color="#000000"
+         id="rect1679" />
+      <rect
+         x="111.95"
+         y="54.429001"
+         width="20"
+         height="48"
+         fill="#1f59c9"
+         stop-color="#000000"
+         id="rect1681" />
+      <rect
+         x="131.95"
+         y="54.429001"
+         width="20"
+         height="48"
+         fill="#ed1d24"
+         stop-color="#000000"
+         id="rect1683" />
+    </g>
+    <rect
+       x="91.945999"
+       y="118.57"
+       width="20"
+       height="48"
+       stop-color="#000000"
+       stroke-width="1.0286"
+       id="rect1687" />
+    <rect
+       x="51.945999"
+       y="118.57"
+       width="20"
+       height="48"
+       fill="#ffffff"
+       stop-color="#000000"
+       id="rect1689" />
+    <g
+       id="g1707">
+      <rect
+         x="71.945999"
+         y="118.57"
+         width="20"
+         height="48"
+         fill="#d2c2aa"
+         stop-color="#000000"
+         stroke-width="1.0286"
+         id="rect1691" />
+      <rect
+         x="111.95"
+         y="118.57"
+         width="30"
+         height="48"
+         fill="#1f59c9"
+         stop-color="#000000"
+         stroke-width="1.2597"
+         id="rect1693" />
+      <rect
+         x="141.95"
+         y="118.57"
+         width="10"
+         height="48"
+         fill="#ed1d24"
+         stop-color="#000000"
+         stroke-width="0.72731"
+         id="rect1695" />
+      <rect
+         x="164.03"
+         y="18.902"
+         width="112.86"
+         height="112.86"
+         fill="#ffffff"
+         stop-color="#000000"
+         id="rect1697" />
+      <rect
+         x="276.89001"
+         y="131.75999"
+         width="112.86"
+         height="112.86"
+         fill="#1f59c9"
+         stop-color="#000000"
+         id="rect1699" />
+      <circle
+         cx="364.94"
+         cy="171.37"
+         r="15.308"
+         fill="#d2c2aa"
+         stop-color="#000000"
+         id="circle1701" />
+      <rect
+         x="276.89001"
+         y="18.900999"
+         width="112.86"
+         height="112.86"
+         fill="#d2c2aa"
+         stop-color="#000000"
+         id="rect1703" />
+      <rect
+         x="164.03"
+         y="131.75999"
+         width="112.86"
+         height="112.86"
+         stop-color="#000000"
+         id="rect1705" />
+    </g>
+    <g
+       transform="translate(0,-0.037798)"
+       id="g1713">
+      <circle
+         cx="251.17"
+         cy="59.530998"
+         r="15.308"
+         fill="#d2c2aa"
+         stop-color="#000000"
+         id="circle1709" />
+      <circle
+         cx="240.96001"
+         cy="45.167999"
+         r="10.016"
+         fill="#1f59c9"
+         stop-color="#000000"
+         id="circle1711" />
+    </g>
+    <text
+       x="179.39957"
+       y="68.745628"
+       font-family="'SF Pro'"
+       font-size="11.289px"
+       font-weight="900"
+       stroke-width="0.26458"
+       style="line-height:1.25"
+       xml:space="preserve"
+       id="text1717"><tspan
+         x="179.39957"
+         y="68.745628"
+         font-family="Raleway"
+         font-size="11.289px"
+         font-weight="900"
+         stroke-width="0.26458"
+         id="tspan1715">HELLO WORLD</tspan></text>
+    <text
+       x="195.68962"
+       y="83.948517"
+       fill="#1f59c9"
+       font-family="Raleway"
+       font-size="6.35px"
+       font-weight="300"
+       stroke-width="0.26458"
+       style="line-height:1.25"
+       xml:space="preserve"
+       id="text1723"><tspan
+         x="195.68962"
+         y="83.948517"
+         id="tspan1719">Prepare to sound</tspan><tspan
+         x="195.68962"
+         y="91.903854"
+         id="tspan1721">totally awesome.</tspan></text>
+    <g
+       transform="translate(0,-4.1955)"
+       id="g1729">
+      <circle
+         cx="367.20001"
+         cy="63.688999"
+         r="15.308"
+         fill="#ffffff"
+         stop-color="#000000"
+         id="circle1725" />
+      <circle
+         cx="357"
+         cy="49.326"
+         r="10.016"
+         fill="#1f59c9"
+         stop-color="#000000"
+         id="circle1727" />
+    </g>
+    <text
+       x="292.26196"
+       y="68.745628"
+       font-family="'SF Pro'"
+       font-size="11.289px"
+       font-weight="900"
+       stroke-width="0.26458"
+       style="line-height:1.25"
+       xml:space="preserve"
+       id="text1733"><tspan
+         x="292.26196"
+         y="68.745628"
+         font-family="Raleway"
+         font-size="11.289px"
+         font-weight="900"
+         stroke-width="0.26458"
+         id="tspan1731">HELLO WORLD</tspan></text>
+    <g
+       id="g1743">
+      <circle
+         cx="251.17"
+         cy="172.50999"
+         r="15.308"
+         fill="#1f59c9"
+         stop-color="#000000"
+         id="circle1735" />
+      <circle
+         cx="240.96001"
+         cy="158.14999"
+         r="10.016"
+         fill="#d2c2aa"
+         stop-color="#000000"
+         id="circle1737" />
+      <text
+         x="179.39958"
+         y="179.49265"
+         fill="#ffffff"
+         font-family="'SF Pro'"
+         font-size="11.289px"
+         font-weight="900"
+         stroke-width="0.26458"
+         style="line-height:1.25"
+         xml:space="preserve"
+         id="text1741"><tspan
+           x="179.39958"
+           y="179.49265"
+           fill="#ffffff"
+           font-family="Raleway"
+           font-size="11.289px"
+           font-weight="900"
+           stroke-width="0.26458"
+           id="tspan1739">HELLO WORLD</tspan></text>
+    </g>
+    <text
+       x="292.26193"
+       y="179.49266"
+       fill="#ffffff"
+       font-family="'SF Pro'"
+       font-size="11.289px"
+       font-weight="900"
+       stroke-width="0.26458"
+       style="line-height:1.25"
+       xml:space="preserve"
+       id="text1747"><tspan
+         x="292.26193"
+         y="179.49266"
+         fill="#ffffff"
+         font-family="Raleway"
+         font-size="11.289px"
+         font-weight="900"
+         stroke-width="0.26458"
+         id="tspan1745">HELLO WORLD</tspan></text>
+    <g
+       font-family="Raleway"
+       font-size="6.35px"
+       font-weight="300"
+       stroke-width="0.26458"
+       id="g1767">
+      <text
+         x="308.552"
+         y="83.948517"
+         fill="#1f59c9"
+         style="line-height:1.25"
+         xml:space="preserve"
+         id="text1753"><tspan
+           x="308.552"
+           y="83.948517"
+           id="tspan1749">Prepare to sound</tspan><tspan
+           x="308.552"
+           y="91.903854"
+           id="tspan1751">totally awesome.</tspan></text>
+      <text
+         x="195.68964"
+         y="195.82947"
+         fill="#c9b699"
+         style="line-height:1.25"
+         xml:space="preserve"
+         id="text1759"><tspan
+           x="195.68964"
+           y="195.82947"
+           id="tspan1755">Prepare to sound</tspan><tspan
+           x="195.68964"
+           y="203.78481"
+           id="tspan1757">totally awesome.</tspan></text>
+      <text
+         x="307.94858"
+         y="195.82947"
+         fill="#ffffff"
+         style="line-height:1.25"
+         xml:space="preserve"
+         id="text1765"><tspan
+           x="307.94858"
+           y="195.82947"
+           id="tspan1761">Prepare to sound</tspan><tspan
+           x="307.94858"
+           y="203.78481"
+           id="tspan1763">totally awesome.</tspan></text>
+    </g>
+    <text
+       x="206.07558"
+       y="116.01208"
+       font-family="'SF Pro'"
+       font-size="8.4667px"
+       font-weight="900"
+       stroke-width="0.26458"
+       style="line-height:1.25"
+       xml:space="preserve"
+       id="text1771"><tspan
+         x="206.07558"
+         y="116.01208"
+         fill="#ffffff"
+         font-family="Raleway"
+         font-size="8.4667px"
+         font-weight="900"
+         stroke-width="0.26458"
+         id="tspan1769">CLICK</tspan></text>
+    <g
+       transform="translate(28.348)"
+       id="g1779">
+      <rect
+         x="168.67999"
+         y="102.62"
+         width="46.868999"
+         height="19.655001"
+         fill="#ed1d24"
+         stop-color="#000000"
+         id="rect1773" />
+      <text
+         x="179.33917"
+         y="115.6341"
+         fill="#ffffff"
+         font-family="'SF Pro'"
+         font-size="8.4667px"
+         font-weight="900"
+         stroke-width="0.26458"
+         style="line-height:1.25"
+         xml:space="preserve"
+         id="text1777"><tspan
+           x="179.33917"
+           y="115.6341"
+           fill="#ffffff"
+           font-family="Raleway"
+           font-size="8.4667px"
+           font-weight="900"
+           stroke-width="0.26458"
+           id="tspan1775">CLICK</tspan></text>
+    </g>
+    <g
+       transform="translate(140.83)"
+       id="g1787">
+      <rect
+         x="168.67999"
+         y="102.62"
+         width="46.868999"
+         height="19.655001"
+         fill="#ed1d24"
+         stop-color="#000000"
+         id="rect1781" />
+      <text
+         x="179.33917"
+         y="115.6341"
+         fill="#ffffff"
+         font-family="'SF Pro'"
+         font-size="8.4667px"
+         font-weight="900"
+         stroke-width="0.26458"
+         style="line-height:1.25"
+         xml:space="preserve"
+         id="text1785"><tspan
+           x="179.33917"
+           y="115.6341"
+           fill="#ffffff"
+           font-family="Raleway"
+           font-size="8.4667px"
+           font-weight="900"
+           stroke-width="0.26458"
+           id="tspan1783">CLICK</tspan></text>
+    </g>
+    <g
+       id="g1803">
+      <rect
+         x="196.64999"
+         y="213.37"
+         width="46.868999"
+         height="19.655001"
+         fill="#ed1d24"
+         stop-color="#000000"
+         id="rect1789" />
+      <text
+         x="207.30942"
+         y="226.38112"
+         fill="#ffffff"
+         font-family="'SF Pro'"
+         font-size="8.4667px"
+         font-weight="900"
+         stroke-width="0.26458"
+         style="line-height:1.25"
+         xml:space="preserve"
+         id="text1793"><tspan
+           x="207.30942"
+           y="226.38112"
+           fill="#ffffff"
+           font-family="Raleway"
+           font-size="8.4667px"
+           font-weight="900"
+           stroke-width="0.26458"
+           id="tspan1791">CLICK</tspan></text>
+      <rect
+         x="309.51001"
+         y="213.37"
+         width="46.868999"
+         height="19.655001"
+         fill="#ffffff"
+         stop-color="#000000"
+         id="rect1795" />
+      <text
+         x="320.17181"
+         y="226.38112"
+         fill="#000000"
+         font-family="'SF Pro'"
+         font-size="8.4667px"
+         font-weight="900"
+         stroke-width="0.26458"
+         style="line-height:1.25"
+         xml:space="preserve"
+         id="text1799"><tspan
+           x="320.17181"
+           y="226.38112"
+           fill="#000000"
+           font-family="Raleway"
+           font-size="8.4667px"
+           font-weight="900"
+           stroke-width="0.26458"
+           id="tspan1797">CLICK</tspan></text>
+      <circle
+         cx="354.73001"
+         cy="157.00999"
+         r="10.016"
+         fill="#ffffff"
+         stop-color="#000000"
+         id="circle1801" />
+    </g>
+    <g
+       id="g1811">
+      <rect
+         x="81.264999"
+         y="198.06"
+         width="37.419998"
+         height="54.806999"
+         fill="#ffffff"
+         stop-color="#000000"
+         id="rect1805" />
+      <circle
+         cx="99.974998"
+         cy="212.99001"
+         r="10.016"
+         fill="#d2c2aa"
+         stop-color="#000000"
+         id="circle1807" />
+      <circle
+         cx="99.974998"
+         cy="237.94"
+         r="10.016"
+         fill="#d2c2aa"
+         stop-color="#000000"
+         id="circle1809" />
+    </g>
+    <g
+       id="g1853">
+      <g
+         id="g2451">
+        <rect
+           x="36.138"
+           y="273.64999"
+           width="103.19"
+           height="72.570999"
+           fill="#ffffff"
+           stop-color="#000000"
+           id="rect1813" />
+        <rect
+           x="47.178001"
+           y="327.84039"
+           width="8.3155003"
+           height="10.961"
+           stop-color="#000000"
+           id="rect1815"
+           style="fill:#d2c2aa" />
+        <rect
+           x="49.521"
+           y="281.08038"
+           width="3.4017999"
+           height="48.797001"
+           stop-color="#000000"
+           id="rect1817"
+           style="fill:#d2c2aa" />
+        <rect
+           x="59.153999"
+           y="289.20557"
+           width="8.3155003"
+           height="10.961"
+           fill="#d2c2aa"
+           stop-color="#000000"
+           id="rect1821" />
+        <rect
+           x="61.497002"
+           y="281.07999"
+           width="3.4017999"
+           height="57.490002"
+           fill="#d2c2aa"
+           stop-color="#000000"
+           id="rect1823" />
+        <rect
+           x="71.130005"
+           y="311.96451"
+           width="8.3155003"
+           height="10.961"
+           stop-color="#000000"
+           id="rect1825"
+           style="fill:#d2c2aa" />
+        <rect
+           x="73.473"
+           y="281.08038"
+           width="3.4017999"
+           height="57.558228"
+           stop-color="#000000"
+           id="rect1827"
+           style="fill:#d2c2aa;stroke-width:1.08607" />
+        <rect
+           x="83.106003"
+           y="327.84039"
+           width="8.3155003"
+           height="10.961"
+           stop-color="#000000"
+           id="rect1831"
+           style="fill:#d2c2aa" />
+        <rect
+           x="85.448997"
+           y="281.08038"
+           width="3.4017999"
+           height="48.797001"
+           stop-color="#000000"
+           id="rect1833"
+           style="fill:#d2c2aa" />
+        <rect
+           x="95.082001"
+           y="327.83975"
+           width="8.3155003"
+           height="10.961"
+           stop-color="#000000"
+           id="rect1837"
+           style="fill:#d2c2aa" />
+        <rect
+           x="97.425003"
+           y="281.07999"
+           width="3.4017999"
+           height="57.490002"
+           stop-color="#000000"
+           id="rect1839"
+           style="fill:#d2c2aa" />
+        <rect
+           x="107.06"
+           y="305.08072"
+           width="8.3155003"
+           height="10.961"
+           stop-color="#000000"
+           id="rect1841"
+           style="fill:#d2c2aa" />
+        <rect
+           x="109.4"
+           y="281.07999"
+           width="3.4017999"
+           height="57.490002"
+           stop-color="#000000"
+           id="rect1843"
+           style="fill:#d2c2aa" />
+        <rect
+           x="119.034"
+           y="327.84039"
+           width="8.3155003"
+           height="10.961"
+           stop-color="#000000"
+           id="rect1847"
+           style="fill:#d2c2aa" />
+        <rect
+           x="121.377"
+           y="281.08038"
+           width="3.4017999"
+           height="48.797001"
+           stop-color="#000000"
+           id="rect1849"
+           style="fill:#d2c2aa" />
+      </g>
+    </g>
+  </g>
+</svg>
