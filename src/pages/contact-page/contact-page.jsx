@@ -4,12 +4,13 @@ import {useDispatch} from 'react-redux'
 import {setOffHomePage} from '../../actions/navigation'
 
 import qs from 'qs'
-import './secondary-page.scss'
+import './contact-page.scss'
 import Footer from '../../components/footer/footer'
+import ContactForm from '../../components/contact-form/contact-form'
 
-const cb = 'secondary'
+const cb = 'contact'
 
-const SecondaryPage = ({location}) => {
+const ContactPage = ({location}) => {
     const dispatch = useDispatch()
     useEffect(() => {
         window.scrollTo(0, 0)
@@ -21,15 +22,14 @@ const SecondaryPage = ({location}) => {
 
 
     const {subject: rawSubject = ''} = qs.parse(location.search, {ignoreQueryPrefix: true})
-    const subject = rawSubject.replace('-', ' ')
+    const subject = rawSubject.replace('_', ' ')
 
     return (
         <div className={cb}>
             <div className={`${cb}__flex`}>
                 <div className={`${cb}__page-content`}>
-                    <h1 className={`${cb}__heading`}>CONTACT</h1>
-                    <h1 className={`${cb}__heading`}>{subject}</h1>
-                    <p>(Footer sticks to bottom)</p>
+                    <h2 className={`${cb}__heading`}>CONTACT</h2>
+                    <ContactForm subjectPrefill={subject}/>
                 </div>
                 <Footer />
             </div>
@@ -37,10 +37,10 @@ const SecondaryPage = ({location}) => {
     )
 }
 
-SecondaryPage.propTypes = {
+ContactPage.propTypes = {
     location: {
         search: PropTypes.string,
     },
 }
 
-export default SecondaryPage
+export default ContactPage

@@ -1,7 +1,7 @@
 import React, {useState} from 'react'
 import {useSelector} from 'react-redux'
 
-import {CONTACT_URL} from '../../utils/constants'
+import {CONTACT_URL, ENGINEERING_URL, EQUIPMENT_URL, TRANSFER_URL} from '../../utils/constants'
 import {getIsBelowScrollThreshold, getIsOffHomePage} from '../../selectors/app'
 import Logo from '../../images/logo.png'
 
@@ -26,7 +26,10 @@ const NavBar = () => {
             </Link>
             <div className={`${cb}__links ${menuCSS}`}>
                 <button className={`icon ${menuCSS}`} onClick={() => setMenuOpen(!menuOpen)}><i className={`fa ${menuIcon}`}></i></button>
-                <Link id={'secondary-link'} className={`${cb}__link ${menuCSS}`} to={CONTACT_URL}>CONTACT</Link>
+                <Link id={'engineering-link'} className={`${cb}__link ${menuCSS}`} to={ENGINEERING_URL}>AUDIO ENGINEERING</Link>
+                <Link id={'engineering-link'} className={`${cb}__link ${menuCSS}`} to={TRANSFER_URL}>AUDIO TRANSFER & RESTORATION</Link>
+                <Link id={'repair-link'} className={`${cb}__link ${menuCSS}`} to={EQUIPMENT_URL}>AUDIO EQUIPMENT REPAIR</Link>
+                <Link id={'contact-link'} className={`${cb}__link ${menuCSS}`} to={CONTACT_URL}>INQUIRIES</Link>
             </div>
         </div>
     )

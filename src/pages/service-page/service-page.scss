@@ -2,19 +2,22 @@
 
 $cutoff-width: 1100px;
 
-.services {
-    background-image: url('../../images/mixer.jpg');
-    background-repeat: no-repeat;
+.service {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
     background-size: cover;
-    background-position-x: center;
+    background-repeat: no-repeat;
 
-    &__flex {
+    &__heading {
+        font-weight: 900;
+        font-size: $font-size-h1;
+    }
+
+    &__content-wrapper {
+        flex-grow: 2;
         display: flex;
-        height: 100%;
-
-        @include below-width($cutoff-width) {
-            flex-direction: column;
-        }
+        margin-top: 4rem;
     }
 
     &__copy {
@@ -28,7 +31,7 @@ $cutoff-width: 1100px;
         @include below-width($cutoff-width) {
             max-width: 100%;
         }
-        
+
         p {
             font-size: $font-size-h5;
             margin-top: 4rem;
@@ -36,18 +39,12 @@ $cutoff-width: 1100px;
         }
     }
 
-    &__heading {
-        font-weight: 900;
-        font-size: $font-size-h1;
-    }
-
     &__services-wrapper {
-        flex: 3;
+        padding: 8rem 8rem 6rem;
         display: flex;
-        justify-content: space-around;
-        padding: 8rem;
         flex-wrap: wrap;
-        align-content: center;
+        flex: 3;
+        align-content: flex-start;
     }
 
     &__service-wrapper {
@@ -58,7 +55,7 @@ $cutoff-width: 1100px;
         text-align: center;
         font-size: $font-size-h2;
     }
-    
+
     &__link {
         text-decoration: none;
         color: white;
@@ -71,4 +68,5 @@ $cutoff-width: 1100px;
             color: $highlight-color;
         }
     }
+    
 }

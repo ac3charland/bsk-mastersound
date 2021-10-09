@@ -1,6 +1,6 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
-import {CONTACT_URL, SERVICES_SECTION_ID} from '../../utils/constants'
+import {CONTACT_URL, SERVICES_SECTION_ID, HOME_SERVICES} from '../../utils/constants'
 
 import './services.scss'
 
@@ -15,9 +15,9 @@ const Services = () => (
                 <p>Vestibulum justo mauris, auctor eu sapien at, euismod cursus nisl. Fusce tristique orci eu ligula finibus, nec pulvinar nisl lobortis. Nam ultricies mattis fermentum. Nunc nulla diam, vestibulum ac nibh volutpat, aliquet elementum sapien. Praesent laoreet libero auctor ante fringilla blandit. Fusce rhoncus blandit magna, id rhoncus turpis bibendum a. Suspendisse laoreet diam non gravida aliquet. Nulla blandit est sed efficitur posuere. Praesent at nisl congue, malesuada erat sit amet, egestas lorem. Cras eget nunc neque. Maecenas risus tortor, ultrices nec elit convallis, facilisis congue eros. Curabitur lobortis non nunc non sollicitudin. Fusce metus orci, mollis vitae iaculis ac, lacinia ac sem. Integer hendrerit turpis turpis, eget iaculis nunc venenatis quis.</p>
             </div>
             <div className={`${cb}__services-wrapper`}>
-                {SERVICES.map((service, idx) => (
+                {HOME_SERVICES.map((service, idx) => (
                     <div key={service + idx} className={`${cb}__service-wrapper`}>
-                        <Link to={`${CONTACT_URL}?subject=${service.replace(' ', '-')}`} className={`${cb}__link`}>{service.toUpperCase()}</Link>
+                        <Link to={`${CONTACT_URL}?subject=${service.replace(' ', '_')}`} className={`${cb}__link`}>{service.toUpperCase()}</Link>
                     </div>
                 ))}
             </div>
@@ -25,17 +25,6 @@ const Services = () => (
     </div>
 )
 
-const SERVICES = [
-    'Studio Recording',
-    'Live Recording',
-    'Mixing',
-    'Mastering',
-    'Tape Machine Cleaning',
-    'Tape Machine Restoration',
-    'Tape Machine Calibration',
-    'Turntable Setup',
-    'Audio Format Transfer',
-    'Audio Restoration',
-]
+
 
 export default Services

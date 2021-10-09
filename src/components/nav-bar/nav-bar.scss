@@ -32,11 +32,11 @@
     }
 
     .navbar__link {
-      color: $highlight-color;
+      color: black;
       margin-top: 0;
 
       &:hover {
-        color: $link-hover-color;
+        color: $highlight-color;
       }
     }
 
@@ -111,7 +111,7 @@
     text-decoration: none;
 
     &:hover {
-      color: lightgray;
+      color: $highlight-color;
     }
 
     @include transition(margin-top 0.2s, color 0.18s);

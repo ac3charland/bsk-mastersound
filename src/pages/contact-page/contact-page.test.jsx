@@ -1,14 +1,14 @@
-import SecondaryPage from './secondary-page'
+import ContactPage from './contact-page'
 
-const cb = 'secondary'
+const cb = 'contact'
 
-describe('SecondaryPage', () => {
+describe('ContactPage', () => {
     let props, render
 
     beforeEach(() => {
         props = {}
 
-        render = (changedProps = {}) => mount(<SecondaryPage {...props} {...changedProps} />)
+        render = (changedProps = {}) => mount(<ContactPage {...props} {...changedProps} />)
     })
 
     it('renders without crashing', () => {

@@ -1,7 +1,54 @@
+// Internal URLs
 export const CONTACT_URL = '/contact'
+export const ENGINEERING_URL = '/audio-engineering'
+export const EQUIPMENT_URL = '/audio-equipment'
+export const TRANSFER_URL = '/audio-transfer'
+
+// Services
+export const HOME_SERVICES = [
+    'Studio Recording',
+    'Live Recording',
+    'Mixing',
+    'Mastering',
+    'Tape Machine Cleaning',
+    'Tape Machine Restoration',
+    'Tape Machine Calibration',
+    'Turntable Setup',
+    'Audio Format Transfer',
+    'Audio Restoration',
+]
+
+export const ENGINEERING_SERVICES = [
+    'End-to-End Audio Production',
+    'Studio Recording',
+    'Live Show & On Location Recording',
+    'Overdub Existing Material',
+    'Mix Existing Material',
+    'Master to CD',
+    'Master to LP',
+    'Master to Cassette',
+    'Master to Hi-Res File',
+]
+
+export const EQUIPMENT_SERVICES = [
+    'Tape Machine Cleaning',
+    'Tape Machine Restoration',
+    'Tape Machine Calibration',
+    'Turntable Setup',
+    'Turntable Cartridge Alignment',
+    'Other Audio Equipment Repair',
+]
+
+export const TRANSFER_SERVICES = [
+    'Tape Baking',
+    'LP Transfer',
+    'Cassette Transfer',
+    'Open Reel Transfer',
+    'DTRS Transfer',
+    'Other Format Transfer',
+]
 
 // External URLs
-
 export const ALEX_PORTFOLIO_URL = 'https://www.alexcharland.com/'
 
 // Section IDs
