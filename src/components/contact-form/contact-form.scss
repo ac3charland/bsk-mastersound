@@ -52,4 +52,11 @@
             outline: none;
         }
     }
+
+    &__captcha-terms {
+        margin-top: 2rem;
+        a {
+            color: white;
+        }
+    }
 }

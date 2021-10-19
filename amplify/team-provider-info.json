@@ -15,7 +15,7 @@
       "function": {
         "contact": {
           "deploymentBucketName": "amplify-bskmastersound-dev-135708-deployment",
-          "s3Key": "amplify-builds/contact-4435627049314d4f6569-build.zip"
+          "s3Key": "amplify-builds/contact-4e6256334168645a4f59-build.zip"
         }
       }
     }

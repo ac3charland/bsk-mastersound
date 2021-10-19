@@ -1,5 +1,11 @@
 import React, {useState} from 'react'
 import PropTypes from 'prop-types'
+import {API} from 'aws-amplify'
+import {Redirect} from 'react-router-dom'
+
+import Spinner from '../spinner/spinner'
+import {API_NAME, CONTACT_ROUTE, CONTACT_SUCCESS_URL, GOOGLE_PRIVACY_POLICY, GOOGLE_TERMS} from '../../utils/constants'
+import {validateEmail, validateRequiredString, validateName} from '../../utils/form-validation'
 import './contact-form.scss'
 
 const cb = 'contact-form'
@@ -9,10 +15,82 @@ const ContactForm = ({subjectPrefill}) => {
     const [email, setEmail] = useState({value: '', isInvalid: false})
     const [subject, setSubject] = useState({value: subjectPrefill ? subjectPrefill : '', isInvalid: false})
     const [message, setMessage] = useState({value: '', isInvalid: false})
+    const [success, setSuccess] = useState(false)
+    const [captchaError, setCaptchaError] = useState(false)
+    const [otherError, setOtherError] = useState(false)
+    const [showSpinner, setShowSpinner] = useState(false)
+
+    const isFormValid = () => {
+        const isNameValid = validateName(name.value)
+        const isEmailValid = validateEmail(email.value)
+        const isSubjectValid = validateRequiredString(subject.value)
+        const isMessageValid = validateRequiredString(message.value)
+
+        if (!isNameValid || !isEmailValid || !isSubjectValid || !isMessageValid) {
+            setName({...name, isInvalid: !isNameValid})
+            setEmail({...email, isInvalid: !isEmailValid})
+            setSubject({...subject, isInvalid: !isSubjectValid})
+            setMessage({...message, isInvalid: !isMessageValid})
+            return false
+        }
+        return true
+    }
+
+    const sendMessage = async token => {
+        const body = {
+            name: name.value,
+            email: email.value,
+            subject: subject.value,
+            message: message.value,
+            token,
+        }
+
+        try {
+            const res = await API.post(API_NAME, CONTACT_ROUTE, {body})
+            setShowSpinner(false)
+            if (res.msg === 'success') {
+                setSuccess(true)
+            }
+            else if (res.msg === 'captcha failed') {
+                setCaptchaError(true)
+            }
+            else {
+                setOtherError(true)
+            }
+        }
+        catch (err) {
+            setShowSpinner(false)
+            setOtherError(true)
+        }
+    }
+
+    const handleSubmit = e => {
+        e.preventDefault()
+
+        if (isFormValid()) {
+            window.grecaptcha.ready(() => {
+                setShowSpinner(true)
+                setOtherError(false)
+                setCaptchaError(false)
+                window.grecaptcha.execute(process.env.REACT_APP_PUBLIC_KEY || '', {action: 'contact'})
+                    .then((token) => {
+                        sendMessage(token)
+                    })
+                    .catch((err) => {
+                        setOtherError(true)
+                        setShowSpinner(false)
+                    })
+            })
+        }
+    }
+
+    if (success) {
+        return <Redirect to={CONTACT_SUCCESS_URL} />
+    }
 
     return (
         <div className={cb}>
-            <form onSubmit={e => e.preventDefault()}>
+            <form onSubmit={handleSubmit}>
                 <FormElement
                     idString={`${cb}__subject`}
                     title='Subject'
@@ -52,7 +130,11 @@ const ContactForm = ({subjectPrefill}) => {
                 />
                 <div className={`${cb}__submit-wrapper`}>
                     <input className={`${cb}__submit`} type='submit' value='SEND MESSAGE' />
+                    {showSpinner && <Spinner />}
                 </div>
+                <div className={`${cb}__captcha-terms`}>This site is protected by reCAPTCHA and the Google <a href={GOOGLE_PRIVACY_POLICY}>Privacy Policy</a> and <a href={GOOGLE_TERMS}>Terms of Service</a> apply.</div>
+                {captchaError && <h3 className={`${cb}__error ${cb}__api-error-msg`}>Our reCaptcha has mistaken you for a bot. Don't worry: just try submitting again.</h3>}
+                {otherError && <h3 className={`${cb}__error ${cb}__api-error-msg`}>An error occurred while sending your message. Please try again.</h3>}
             </form>
         </div>
     )

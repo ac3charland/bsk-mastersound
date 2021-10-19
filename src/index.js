@@ -2,6 +2,8 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import {Provider} from 'react-redux'
 import smoothscroll from 'smoothscroll-polyfill'
+import Amplify from 'aws-amplify'
+import config from './aws-exports'
 
 import App from './app'
 import makeStore from './store'
@@ -10,6 +12,7 @@ import './index.scss'
 
 const store = makeStore()
 smoothscroll.polyfill()
+Amplify.configure(config)
 
 ReactDOM.render(
   <Provider store={store}>

@@ -1,8 +1,12 @@
 // Internal URLs
 export const CONTACT_URL = '/contact'
+export const CONTACT_SUCCESS_URL = '/contact/success'
 export const ENGINEERING_URL = '/audio-engineering'
 export const EQUIPMENT_URL = '/audio-equipment'
 export const TRANSFER_URL = '/audio-transfer'
+export const API_NAME = 'backend'
+export const CONTACT_ROUTE = '/contact'
+export const EVENTS_ROUTE = '/events'
 
 // Services
 export const HOME_SERVICES = [
@@ -50,6 +54,9 @@ export const TRANSFER_SERVICES = [
 
 // External URLs
 export const ALEX_PORTFOLIO_URL = 'https://www.alexcharland.com/'
+export const GOOGLE_PRIVACY_POLICY = 'https://policies.google.com/privacy'
+export const GOOGLE_TERMS = 'https://policies.google.com/terms'
+
 
 // Section IDs
 export const BIO_SECTION_ID = 'BIO_SECTION_ID'
