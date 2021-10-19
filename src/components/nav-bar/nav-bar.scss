@@ -40,6 +40,10 @@
       }
     }
 
+    .icon {
+      color: black;
+    }
+
     @include small-screen {
       .navbar__link {
         @include transition(background-color 0.3s);
@@ -118,9 +122,10 @@
   }
 
   .icon {
-    color: black;
+    color: white;
     display: none;
     padding: 2rem 2rem 1rem;
+    @include transition(color 0.2s);
   }
 
   @include small-screen {

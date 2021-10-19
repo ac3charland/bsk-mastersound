@@ -9,6 +9,10 @@
         position: relative;
         max-height: 100vh;
         overflow: hidden;
+
+        @include small-screen {
+        min-height: 50vh;
+        }
     }
 
     &__image {

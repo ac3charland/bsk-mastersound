@@ -1,0 +1,35 @@
+{
+  "paths": [
+    {
+      "name": "/contact",
+      "lambdaFunction": "contact",
+      "privacy": {
+        "open": true
+      },
+      "policyResourceName": "/contact"
+    }
+  ],
+  "resourceName": "backend",
+  "apiName": "backend",
+  "functionArns": [
+    {
+      "lambdaFunction": "contact"
+    }
+  ],
+  "privacy": {
+    "auth": 0,
+    "unauth": 0,
+    "authRoleName": "amplify-bskmastersound-dev-135708-authRole",
+    "unAuthRoleName": "amplify-bskmastersound-dev-135708-unauthRole"
+  },
+  "dependsOn": [
+    {
+      "category": "function",
+      "resourceName": "contact",
+      "attributes": [
+        "Name",
+        "Arn"
+      ]
+    }
+  ]
+}
