@@ -9,6 +9,9 @@ import {setBelowScrollThreshold, setAboveScrollThreshold} from './actions/scroll
 import {getIsBelowScrollThreshold, getIsOffHomePage} from './selectors/app'
 import ServicePage from './pages/service-page/service-page'
 import ContactSuccessPage from './pages/contact-page-success/contact-page-success'
+import RecordingCopy from './components/service-copy-components/recording-copy'
+import TransferCopy from './components/service-copy-components/transfer-copy'
+import RepairCopy from './components/service-copy-components/repair-copy'
 
 const App = () => {
     const dispatch = useDispatch()
@@ -42,9 +45,9 @@ const App = () => {
                                 <Route exact path='/' component={HomePage} />
                                 <Route path={CONTACT_SUCCESS_URL} component={ContactSuccessPage} />
                                 <Route path={CONTACT_URL} component={ContactPage} />
-                                <Route path={ENGINEERING_URL} render={() => <ServicePage title='AUDIO ENGINEERING' services={ENGINEERING_SERVICES} background='/backgrounds/audio-engineering.jpg'/>} />
-                                <Route path={TRANSFER_URL} render={() => <ServicePage title='AUDIO TRANSFER & RESTORATION' services={TRANSFER_SERVICES} background='/backgrounds/transfer.jpg' />} />
-                                <Route path={EQUIPMENT_URL} render={() => <ServicePage title='AUDIO EQUIPMENT' services={EQUIPMENT_SERVICES} background='/backgrounds/equipment.jpg'/>} />
+                                <Route path={ENGINEERING_URL} render={() => <ServicePage title='AUDIO ENGINEERING' services={ENGINEERING_SERVICES} background='/backgrounds/audio-engineering.jpg' copy={RecordingCopy}/>} />
+                                <Route path={TRANSFER_URL} render={() => <ServicePage title='AUDIO TRANSFER & RESTORATION' services={TRANSFER_SERVICES} background='/backgrounds/transfer.jpg' copy={TransferCopy}/>} />
+                                <Route path={EQUIPMENT_URL} render={() => <ServicePage title='AUDIO EQUIPMENT' services={EQUIPMENT_SERVICES} background='/backgrounds/equipment.jpg' copy={RepairCopy}/>} />
                                 <Route component={HomePage} />
                             </Switch>
                         </div>
