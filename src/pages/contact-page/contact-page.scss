@@ -21,15 +21,21 @@
   &__flex {
     display: flex;
     flex-direction: column;
-    position: absolute;
     width: 100%;
-    top: 0;
-    bottom: 0;
-    margin-top: 15rem;
+    // position: absolute;
+    // top: 0;
+    // bottom: 0;
+    min-height: calc(100vh - 10rem);
+    padding-top: 10rem;
     justify-content: space-between;
+
+    @include small-screen {
+      padding-top: 10rem;
+    }
   }
 
   &__page-content {
     flex-grow: 2;
+    padding-bottom: 2rem;
   }
 }

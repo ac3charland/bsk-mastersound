@@ -3,12 +3,10 @@ import PropTypes from 'prop-types'
 import {useDispatch} from 'react-redux'
 import {setOffHomePage} from '../../actions/navigation'
 
-import qs from 'qs'
 import './contact-page-success.scss'
 import Footer from '../../components/footer/footer'
-import ContactForm from '../../components/contact-form/contact-form'
 
-const cb = 'contact'
+const cb = 'contact-success'
 
 const ContactSuccessPage = ({location}) => {
     const dispatch = useDispatch()
@@ -19,10 +17,6 @@ const ContactSuccessPage = ({location}) => {
             dispatch(setOffHomePage(false))
         }
     }, [dispatch])
-
-
-    const {subject: rawSubject = ''} = qs.parse(location.search, {ignoreQueryPrefix: true})
-    const subject = rawSubject.replace('_', ' ')
 
     return (
         <div className={cb}>

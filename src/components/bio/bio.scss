@@ -97,7 +97,8 @@
         position: relative;
 
         @include small-screen {
-            font-size: $font-size-h5;
+            font-size: $font-size-h6;
+            margin-top: 2rem;
         }
     }
 }

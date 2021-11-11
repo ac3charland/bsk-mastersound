@@ -90,7 +90,7 @@ const ContactForm = ({subjectPrefill}) => {
 
     return (
         <div className={cb}>
-            <form onSubmit={handleSubmit}>
+            <form className={`${cb}__form`} onSubmit={handleSubmit}>
                 <FormElement
                     idString={`${cb}__subject`}
                     title='Subject'

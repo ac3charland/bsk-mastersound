@@ -1,12 +1,12 @@
 import React, {useState} from 'react'
 import {useSelector} from 'react-redux'
+import {Link} from 'react-router-dom'
 
 import {CONTACT_URL, ENGINEERING_URL, EQUIPMENT_URL, TRANSFER_URL} from '../../utils/constants'
 import {getIsBelowScrollThreshold, getIsOffHomePage} from '../../selectors/app'
 import Logo from '../../images/logo.png'
 
 import './nav-bar.scss'
-import {Link} from 'react-router-dom'
 
 const cb = 'navbar'
 
@@ -26,10 +26,38 @@ const NavBar = () => {
             </Link>
             <div className={`${cb}__links ${menuCSS}`}>
                 <button className={`icon ${menuCSS}`} onClick={() => setMenuOpen(!menuOpen)}><i className={`fa ${menuIcon}`}></i></button>
-                <Link id={'engineering-link'} className={`${cb}__link ${menuCSS}`} to={ENGINEERING_URL}>AUDIO ENGINEERING</Link>
-                <Link id={'engineering-link'} className={`${cb}__link ${menuCSS}`} to={TRANSFER_URL}>AUDIO TRANSFER & RESTORATION</Link>
-                <Link id={'repair-link'} className={`${cb}__link ${menuCSS}`} to={EQUIPMENT_URL}>AUDIO EQUIPMENT REPAIR</Link>
-                <Link id={'contact-link'} className={`${cb}__link ${menuCSS}`} to={CONTACT_URL}>INQUIRIES</Link>
+                <Link
+                    id={'engineering-link'}
+                    className={`${cb}__link ${menuCSS}`}
+                    to={ENGINEERING_URL}
+                    onClick={() => setMenuOpen(false)}
+                >
+                    AUDIO ENGINEERING
+                </Link>
+                <Link
+                    id={'engineering-link'}
+                    className={`${cb}__link ${menuCSS}`}
+                    to={TRANSFER_URL}
+                    onClick={() => setMenuOpen(false)}
+                >
+                    AUDIO TRANSFER & RESTORATION
+                </Link>
+                <Link
+                    id={'repair-link'}
+                    className={`${cb}__link ${menuCSS}`}
+                    to={EQUIPMENT_URL}
+                    onClick={() => setMenuOpen(false)}
+                    >
+                    AUDIO EQUIPMENT REPAIR
+                </Link>
+                <Link
+                    id={'contact-link'}
+                    className={`${cb}__link ${menuCSS}`}
+                    to={CONTACT_URL}
+                    onClick={() => setMenuOpen(false)}
+                >
+                    INQUIRIES
+                </Link>
             </div>
         </div>
     )

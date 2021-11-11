@@ -7,7 +7,7 @@ const RecordingCopy = () => (
         <p>Want to record in the studio? Bruce has access to a variety of spaces for your recording day. Plus, you can mix and master your recording with Bruce, or take your tracks with you to mix and master elsewhere.</p>
         <p>Have tracks from an existing project that you want mixed and mastered? Or maybe you want to add some overdubs? Either way, Bruce’s home recording and hi-fi system will let you do both.</p>
         <p>Planning to release on CD? LP? Cassette? Bruce can master for all those formats and more.</p>
-        <p>To start your inquiry, select a category on the right.</p>
+        <p>To start your inquiry, select a category.</p>
     </>
 )
 

@@ -2,11 +2,18 @@
 
 .contact-form {
     width: 50rem;
-    padding: 0 4rem;
     margin: 0 auto;
 
     @include small-screen {
         width: 100%;
+    }
+
+    &__form {
+        padding: 0 4rem;
+
+        @include small-screen {
+            padding: 0 2rem;
+        }
     }
 
     &__form-element {

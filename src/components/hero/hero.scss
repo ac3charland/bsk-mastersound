@@ -2,7 +2,7 @@
 
 .hero {
     $chevron-width: 8rem;
-    
+
     &__wrapper {
         background-color: $gray-primary-color;
         width: 100%;
@@ -11,12 +11,17 @@
         overflow: hidden;
 
         @include small-screen {
-        min-height: 50vh;
+            min-height: 50vh;
         }
     }
 
     &__image {
         width: 100%;
+
+        @include small-screen {
+            height: 100%;
+            width: 200%;
+        }
     }
 
     &__title {
@@ -36,7 +41,8 @@
         font-size: calc(2rem + 3.5vw);
 
         @include small-screen {
-            font-size: $font-size-h3;
+            font-size: $font-size-h4;
+            margin-left: -4rem;
         }
 
         div {
@@ -73,7 +79,7 @@
             @include transform(translateY(calc(-2.5rem - 4vw)));
 
             @include small-screen {
-                @include transform(translateY(calc(-1 * #{$font-size-h3} - 0.5rem)))
+                @include transform(translateY(calc(-1 * #{$font-size-h4} - 0.5rem)));
             }
         }
     }
@@ -97,7 +103,7 @@
         &:focus {
             cursor: pointer;
 
-            .hero__chevron{
+            .hero__chevron {
                 animation: doubleBounce ease-in-out 0.45s;
                 animation-fill-mode: forwards;
 
