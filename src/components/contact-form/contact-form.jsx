@@ -8,7 +8,7 @@ import {API_NAME, CONTACT_ROUTE, CONTACT_SUCCESS_URL, GOOGLE_PRIVACY_POLICY, GOO
 import {validateEmail, validateRequiredString, validateName} from '../../utils/form-validation'
 import './contact-form.scss'
 
-const cb = 'contact-form'
+const cb = 'form'
 
 const ContactForm = ({subjectPrefill}) => {
     const [name, setName] = useState({value: '', isInvalid: false})
@@ -90,7 +90,7 @@ const ContactForm = ({subjectPrefill}) => {
 
     return (
         <div className={cb}>
-            <form className={`${cb}__form`} onSubmit={handleSubmit}>
+            <form className={`${cb}__form`} onSubmit={handleSubmit} noValidate>
                 <FormElement
                     idString={`${cb}__subject`}
                     title='Subject'
