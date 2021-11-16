@@ -38,9 +38,9 @@ const ContactPage = ({location}) => {
 }
 
 ContactPage.propTypes = {
-    location: {
+    location: PropTypes.shape({
         search: PropTypes.string,
-    },
+    }),
 }
 
 export default ContactPage
