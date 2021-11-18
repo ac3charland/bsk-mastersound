@@ -21,8 +21,7 @@ const ContactPage = ({location}) => {
     }, [dispatch])
 
 
-    const {subject: rawSubject = ''} = qs.parse(location.search, {ignoreQueryPrefix: true})
-    const subject = rawSubject.replace('_', ' ')
+    const {subject = ''} = qs.parse(location.search, {ignoreQueryPrefix: true})
 
     return (
         <div className={cb}>
