@@ -31,7 +31,6 @@ const Hero = () => {
             },
             animationSpeed
         )
-
     }
 
     useEffect(() => {
@@ -48,15 +47,11 @@ const Hero = () => {
         }
     }, [index])
 
-    useEffect(() => {
-
-    })
-
     const transition = transitioning ? defaultTransition : 'none'
 
 
     return (
-        <div className={`${cb}__wrapper`}>
+        <div className={cb}>
             <img className={`${cb}__image`} alt='Bruce Kasprzk BSK Mastersound Vaccum Tubes' src={HeroImage} />
             <div className={`${cb}__title`}>
                 <div className={`${cb}__slideshow-wrapper`}>

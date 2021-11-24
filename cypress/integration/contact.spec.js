@@ -12,7 +12,7 @@ context('Contact Form', () => {
 
         cy.get(ContactPage.wrapper)
 
-        ContactForm.exercise(ContactPage.wrapper)
+        ContactForm.exercise()
     })
 
     it('handles reCAPTCHA error', () => {
