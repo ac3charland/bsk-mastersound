@@ -13,6 +13,7 @@ context('Contact Form', () => {
         cy.get(ContactPage.wrapper)
 
         ContactForm.exercise()
+        cy.compareSnapshot('contact-success')
     })
 
     it('handles reCAPTCHA error', () => {
@@ -25,6 +26,7 @@ context('Contact Form', () => {
         cy.wait('@captchaError')
         cy.get(ContactPage.wrapper)
         cy.get(ContactForm.apiError).contains('Our reCaptcha has mistaken you for a bot. Don\'t worry: just try submitting again.')
+        cy.compareSnapshot('captcha-error')
     })
 
     it('handles unknown error', () => {
@@ -37,5 +39,6 @@ context('Contact Form', () => {
         cy.wait('@unknownError')
         cy.get(ContactPage.wrapper)
         cy.get(ContactForm.apiError).contains('An error occurred while sending your message. Please try again.')
+        cy.compareSnapshot('other-error')
     })
 })

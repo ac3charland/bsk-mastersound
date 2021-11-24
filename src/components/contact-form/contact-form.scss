@@ -37,12 +37,14 @@
     }
 
     &__submit-wrapper {
-        margin-top: 6rem;
+        margin-top: 4rem;
+        margin-bottom: 2rem;
     }
 
     &__submit {
         font-size: $font-size-h3;
         padding: 1.5rem;
+        margin-top: 2rem;
         border-radius: 10px;
         border: none;
         font-family: $sans-serif;
@@ -65,5 +67,9 @@
         a {
             color: white;
         }
+    }
+
+    &__error {
+        margin-top: 2rem;
     }
 }

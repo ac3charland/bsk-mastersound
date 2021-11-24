@@ -129,8 +129,9 @@ const ContactForm = ({subjectPrefill}) => {
                     errorMsg='Please enter a message.'
                 />
                 <div className={`${cb}__submit-wrapper`}>
-                    <input className={`${cb}__submit`} type='submit' value='SEND MESSAGE' />
-                    {showSpinner && <Spinner />}
+                    {!showSpinner
+                        ? <input className={`${cb}__submit`} type='submit' value='SEND MESSAGE' />
+                        : <Spinner />}
                 </div>
                 <div className={`${cb}__captcha-terms`}>This site is protected by reCAPTCHA and the Google <a href={GOOGLE_PRIVACY_POLICY}>Privacy Policy</a> and <a href={GOOGLE_TERMS}>Terms of Service</a> apply.</div>
                 {captchaError && <h3 className={`${cb}__error ${cb}__api-error-msg`}>Our reCaptcha has mistaken you for a bot. Don't worry: just try submitting again.</h3>}
