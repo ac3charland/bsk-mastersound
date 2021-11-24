@@ -1,5 +1,7 @@
 /* global cy */
 
+import ContactPage from './contact-page'
+
 const ContactForm = {
     wrapper: '.form',
     nameField: '#form__name',
@@ -12,7 +14,7 @@ const ContactForm = {
     emailError: '.form__email-error',
     messageError: '.form__message-error',
     apiError: '.form__api-error-msg',
-    exercise: pageWrapper => {
+    exercise: (pageWrapper = ContactPage.wrapper) => {
         cy.get(ContactForm.submitButton).click()
         cy.get(pageWrapper)
         cy.get(ContactForm.nameError)

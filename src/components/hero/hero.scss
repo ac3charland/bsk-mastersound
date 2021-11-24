@@ -3,16 +3,14 @@
 .hero {
     $chevron-width: 8rem;
 
-    &__wrapper {
-        background-color: $gray-primary-color;
-        width: 100%;
-        position: relative;
-        max-height: 100vh;
-        overflow: hidden;
+    background-color: $gray-primary-color;
+    width: 100%;
+    position: relative;
+    max-height: 100vh;
+    overflow: hidden;
 
-        @include small-screen {
-            min-height: 50vh;
-        }
+    @include small-screen {
+        min-height: 50vh;
     }
 
     &__image {

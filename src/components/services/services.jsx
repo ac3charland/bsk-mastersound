@@ -19,7 +19,7 @@ const Services = () => (
             <div className={`${cb}__services-wrapper`}>
                 {HOME_SERVICES.map((service, idx) => (
                     <div key={service + idx} className={`${cb}__service-wrapper`}>
-                        <Link to={`${CONTACT_URL}?subject=${service.replace(' ', '_')}`} className={`${cb}__link`}>{service.toUpperCase()}</Link>
+                        <Link to={`${CONTACT_URL}?subject=${service}`} className={`${cb}__link`}>{service.toUpperCase()}</Link>
                     </div>
                 ))}
             </div>
