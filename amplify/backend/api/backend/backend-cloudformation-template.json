@@ -8,15 +8,15 @@
         },
     
     
-          "functioncontactName": {
+          "functioncontactFunctionName": {
             "Type": "String",
-            "Default": "functioncontactName"
+            "Default": "functioncontactFunctionName"
           },
 
           
-          "functioncontactArn": {
+          "functioncontactFunctionArn": {
             "Type": "String",
-            "Default": "functioncontactArn"
+            "Default": "functioncontactFunctionArn"
           }
 
           
@@ -168,7 +168,7 @@
                             
                             {
 
-                                "Ref": "functioncontactArn"
+                                "Ref": "functioncontactFunctionArn"
                             },
                             
                             "/invocations"
@@ -267,7 +267,7 @@
                           
                           {
 
-                            "Ref": "functioncontactArn"
+                            "Ref": "functioncontactFunctionArn"
                           },
                           
                           "/invocations"
@@ -324,12 +324,12 @@
       
         
 
-        "functioncontactPermissionbackend": {
+        "functioncontactFunctionPermissionbackend": {
             "Type": "AWS::Lambda::Permission",
             "Properties": {
                 "FunctionName": 
                     {
-                        "Ref":  "functioncontactName"
+                        "Ref":  "functioncontactFunctionName"
                     },
                     
                     "Action": "lambda:InvokeFunction",

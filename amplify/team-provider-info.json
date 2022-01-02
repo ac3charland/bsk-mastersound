@@ -1,42 +1,21 @@
 {
   "dev": {
     "awscloudformation": {
-      "AuthRoleName": "amplify-bskmastersound-dev-135708-authRole",
-      "UnauthRoleArn": "arn:aws:iam::918318660533:role/amplify-bskmastersound-dev-135708-unauthRole",
-      "AuthRoleArn": "arn:aws:iam::918318660533:role/amplify-bskmastersound-dev-135708-authRole",
-      "Region": "us-east-2",
-      "DeploymentBucketName": "amplify-bskmastersound-dev-135708-deployment",
-      "UnauthRoleName": "amplify-bskmastersound-dev-135708-unauthRole",
-      "StackName": "amplify-bskmastersound-dev-135708",
-      "StackId": "arn:aws:cloudformation:us-east-2:918318660533:stack/amplify-bskmastersound-dev-135708/5d96a660-310e-11ec-8766-06b30218a1da",
-      "AmplifyAppId": "d1c276u58ctx5m"
-    },
-    "categories": {
-      "function": {
-        "contact": {
-          "deploymentBucketName": "amplify-bskmastersound-dev-135708-deployment",
-          "s3Key": "amplify-builds/contact-4e6256334168645a4f59-build.zip"
-        }
-      }
-    }
-  },
-  "staging": {
-    "awscloudformation": {
-      "AuthRoleName": "amplify-bskmastersound-staging-123219-authRole",
-      "UnauthRoleArn": "arn:aws:iam::918318660533:role/amplify-bskmastersound-staging-123219-unauthRole",
-      "AuthRoleArn": "arn:aws:iam::918318660533:role/amplify-bskmastersound-staging-123219-authRole",
+      "AuthRoleName": "amplify-bskmastersound-dev-150425-authRole",
+      "UnauthRoleArn": "arn:aws:iam::918318660533:role/amplify-bskmastersound-dev-150425-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::918318660533:role/amplify-bskmastersound-dev-150425-authRole",
       "Region": "us-east-1",
-      "DeploymentBucketName": "amplify-bskmastersound-staging-123219-deployment",
-      "UnauthRoleName": "amplify-bskmastersound-staging-123219-unauthRole",
-      "StackName": "amplify-bskmastersound-staging-123219",
-      "StackId": "arn:aws:cloudformation:us-east-1:918318660533:stack/amplify-bskmastersound-staging-123219/2ba58eb0-61c3-11ec-9df2-0a42328e7139",
-      "AmplifyAppId": "d1ujitpabp7g4m"
+      "DeploymentBucketName": "amplify-bskmastersound-dev-150425-deployment",
+      "UnauthRoleName": "amplify-bskmastersound-dev-150425-unauthRole",
+      "StackName": "amplify-bskmastersound-dev-150425",
+      "StackId": "arn:aws:cloudformation:us-east-1:918318660533:stack/amplify-bskmastersound-dev-150425/92a61570-6c0f-11ec-95e2-12131286546d",
+      "AmplifyAppId": "dk59jru494h70"
     },
     "categories": {
       "function": {
-        "contact": {
-          "deploymentBucketName": "amplify-bskmastersound-staging-123219-deployment",
-          "s3Key": "amplify-builds/contact-4e6256334168645a4f59-build.zip"
+        "contactFunction": {
+          "deploymentBucketName": "amplify-bskmastersound-dev-150425-deployment",
+          "s3Key": "amplify-builds/contactFunction-714854725562706d4933-build.zip"
         }
       }
     }

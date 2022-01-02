@@ -1,6 +1,6 @@
 {
   "function": {
-    "contact": {
+    "contactFunction": {
       "build": true,
       "providerPlugin": "awscloudformation",
       "service": "Lambda"
@@ -13,7 +13,7 @@
       "dependsOn": [
         {
           "category": "function",
-          "resourceName": "contact",
+          "resourceName": "contactFunction",
           "attributes": [
             "Name",
             "Arn"

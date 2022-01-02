@@ -47,12 +47,12 @@
         "FunctionName": {
           "Fn::If": [
             "ShouldNotCreateEnvResources",
-            "contact",
+            "contactFunction",
             {
               "Fn::Join": [
                 "",
                 [
-                  "contact",
+                  "contactFunction",
                   "-",
                   {
                     "Ref": "env"
@@ -89,12 +89,12 @@
         "RoleName": {
           "Fn::If": [
             "ShouldNotCreateEnvResources",
-            "bskmastersoundLambdaRole6d0e29f1",
+            "bskmastersoundLambdaRole5aa35c63",
             {
               "Fn::Join": [
                 "",
                 [
-                  "bskmastersoundLambdaRole6d0e29f1",
+                  "bskmastersoundLambdaRole5aa35c63",
                   "-",
                   {
                     "Ref": "env"
