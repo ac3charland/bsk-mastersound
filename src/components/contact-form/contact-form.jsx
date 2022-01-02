@@ -52,7 +52,6 @@ const ContactForm = ({subjectPrefill}) => {
                 setSuccess(true)
             }
             else if (res.msg === 'captcha failed') {
-                console.log({res})
                 setCaptchaError(true)
             }
             else {
@@ -60,7 +59,6 @@ const ContactForm = ({subjectPrefill}) => {
             }
         }
         catch (err) {
-            console.log({err})
             setShowSpinner(false)
             setOtherError(true)
         }
@@ -76,7 +74,6 @@ const ContactForm = ({subjectPrefill}) => {
                 setCaptchaError(false)
                 window.grecaptcha.execute(process.env.REACT_APP_PUBLIC_KEY || '', {action: 'contact'})
                     .then((token) => {
-                        console.log('sending message:', token)
                         sendMessage(token)
                     })
                     .catch((err) => {
