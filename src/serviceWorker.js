@@ -10,7 +10,6 @@
 // To learn more about the benefits of this model and instructions on how to
 // opt-in, read https://bit.ly/CRA-PWA
 
-/* global process */
 /* eslint-disable no-console */
 
 const isLocalhost = Boolean(

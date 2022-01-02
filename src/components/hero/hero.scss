@@ -1,0 +1,127 @@
+@import "../../globals.scss";
+
+.hero {
+    $chevron-width: 8rem;
+
+    background-color: $gray-primary-color;
+    width: 100%;
+    position: relative;
+    max-height: 100vh;
+    overflow: hidden;
+
+    @include small-screen {
+        min-height: 50vh;
+    }
+
+    &__image {
+        width: 100%;
+
+        @include small-screen {
+            height: 100%;
+            width: 200%;
+        }
+    }
+
+    &__title {
+        position: absolute;
+        left: 0;
+        right: 0;
+        text-align: right;
+        bottom: 5rem;
+        color: white;
+    }
+
+    &__slideshow-wrapper {
+        display: flex;
+        justify-content: center;
+        font-weight: 900;
+        padding-bottom: calc(20vw - 20rem);
+        font-size: calc(2rem + 3.5vw);
+
+        @include small-screen {
+            font-size: $font-size-h4;
+            margin-left: -4rem;
+        }
+
+        div {
+            flex: 1;
+        }
+    }
+
+    &__current-word {
+        @include transform(rotateX(0deg));
+        opacity: 1;
+
+        &-transition {
+            @include transform(rotateX(90deg));
+            opacity: 0;
+        }
+    }
+
+    &__next-word {
+        @include transform(rotateX(90deg));
+
+        &-transition {
+            @include transform(rotateX(0deg));
+        }
+    }
+
+    &__variable-word-container {
+        text-align: left;
+        font-weight: 100;
+
+        &-transition {
+            font-weight: 100;
+            text-align: left;
+            // Causing imprecision
+            @include transform(translateY(calc(-2.5rem - 4vw)));
+
+            @include small-screen {
+                @include transform(translateY(calc(-1 * #{$font-size-h4} - 0.5rem)));
+            }
+        }
+    }
+
+    &__button {
+        display: block;
+        margin: 0 auto;
+        padding: 0;
+        height: 70px;
+        opacity: 1;
+        width: $chevron-width;
+        overflow: hidden;
+        @include transition(opacity 0.3s, width 0.3s);
+
+        &-hidden {
+            opacity: 0;
+            width: 0;
+        }
+
+        &:hover,
+        &:focus {
+            cursor: pointer;
+
+            .hero__chevron {
+                animation: doubleBounce ease-in-out 0.45s;
+                animation-fill-mode: forwards;
+
+                @include small-screen {
+                    @include transform(none);
+                }
+            }
+        }
+    }
+
+    &__chevron-container {
+        margin: 0 auto;
+        width: $chevron-width;
+        @include transition(transform 0.3s);
+        @include transform(translateX(-50%));
+        margin-left: 50%;
+    }
+
+    &__chevron {
+        width: $chevron-width;
+        height: auto;
+    }
+}

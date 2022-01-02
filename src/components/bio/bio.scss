@@ -1,0 +1,104 @@
+@import "../../globals.scss";
+
+.bio {
+    padding: 20rem 8rem;
+    margin: 0 auto;
+    outline: none;
+    background-color: $gray-primary-color;
+    overflow-x: hidden;
+
+    @include small-screen {
+        padding: 10rem 2rem;
+    }
+
+    &__name {
+        font-weight: 900;
+        color: $secondary-color;
+    }
+
+    &__para-wrapper {
+        position: relative;
+        font-size: $font-size-h4;
+        max-width: 50ch;
+        margin: 0 auto;
+    }
+
+    &__svg {
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+        position: absolute;
+        opacity: 0.7;
+    }
+
+    &__speaker {
+        background-image: url("/svgs/speaker.svg");
+        width: 20rem;
+        height: 25rem;
+        top: -8rem;
+
+        @include small-screen {
+            width: 10rem;
+            height: 12.5rem;
+            top: -6rem;
+        }
+        
+
+        &-1 {
+            right: -15rem;
+
+            @include small-screen {
+                right: -2rem;
+            }
+        }
+
+        &-2 {
+            right: 10rem;
+
+            @include small-screen {
+                right: 8rem;
+            }
+        }
+    }
+
+    &__mixer {
+        background-image: url('/svgs/mixer.svg');
+        width: 40rem;
+        height: 25rem;
+        bottom: calc(40% - 16rem);
+        left: -20rem;
+
+        @include small-screen {
+            bottom: 40%;
+            @include transform(scaleX(-1));
+        }
+    }
+
+    &__tape {
+        background-image: url('/svgs/tape.svg');
+        width: 30rem;
+        height: 20rem;
+        bottom: -8rem;
+        right: -14rem;
+
+        @include small-screen {
+            width: 20rem;
+            height: 16rem;
+            right: -4rem;
+            bottom: -4rem;
+        }
+    }
+
+    p {
+        font-size: $font-size-h4;
+        text-align: justify;
+        margin-top: 4rem;
+        z-index: 2;
+        position: relative;
+
+        @include small-screen {
+            font-size: $font-size-h6;
+            margin-top: 2rem;
+        }
+    }
+}

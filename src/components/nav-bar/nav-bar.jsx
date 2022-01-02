@@ -1,6 +1,12 @@
-import React, {useState, useEffect} from 'react'
+import React, {useState} from 'react'
+import {useSelector} from 'react-redux'
+import {Link} from 'react-router-dom'
+
+import {CONTACT_URL, ENGINEERING_URL, EQUIPMENT_URL, TRANSFER_URL} from '../../utils/constants'
+import {getIsBelowScrollThreshold, getIsOffHomePage} from '../../selectors/app'
+import Logo from '../../images/logo.png'
+
 import './nav-bar.scss'
-import {SECONDARY_PAGE_URL} from '../../utils/constants'
 
 const cb = 'navbar'
 
@@ -8,29 +14,50 @@ const NavBar = () => {
     const [menuOpen, setMenuOpen] = useState(false)
     const menuCSS = menuOpen ? 'open' : 'closed'
     const menuIcon = menuOpen ? 'fa-times' : 'fa-bars'
-    const [navBarActive, setNavBarActive] = useState(false)
-
-    useEffect(() => {
-        const changeBackground = () => {
-            const navBarChangeHeight = 20
-            if (window.scrollY >= navBarChangeHeight && !navBarActive) {
-                setNavBarActive(true)
-            }
-            else if (window.scrollY < navBarChangeHeight && navBarActive) {
-                setNavBarActive(false)
-            }
-        }
-        window.addEventListener('scroll', changeBackground, {passive: true})
-
-        return () => window.removeEventListener('scroll', changeBackground)
-    }, [navBarActive])
+    const navBarActive = useSelector(getIsBelowScrollThreshold)
+    const isOffHomePage = useSelector(getIsOffHomePage)
+    const isNavbarActive = isOffHomePage || navBarActive
 
     return (
-        <div id='nav-bar' className={`${cb} ${navBarActive ? 'active' : ''}`}>
-            <a className={`${cb}__home`} href='/'><h1 className={`${cb}__heading`}>[CHANGE_ME_SITE_TITLE]</h1></a>
+        <div id='nav-bar' className={`${cb} ${isNavbarActive ? 'active' : ''}`}>
+            <Link className={`${cb}__home`} to='/'>
+                <img className={`${cb}__logo`} src={Logo} alt='Logo for BSK Mastersound by Bruce Kasprzyk, providing quality audio engineering services' />
+                <h1 className={`${cb}__company-name`}>BSK <span className={`${cb}__mastersound`}>MASTERSOUND</span></h1>
+            </Link>
             <div className={`${cb}__links ${menuCSS}`}>
                 <button className={`icon ${menuCSS}`} onClick={() => setMenuOpen(!menuOpen)}><i className={`fa ${menuIcon}`}></i></button>
-                <a id={'secondary-link'} className={`${cb}__link ${menuCSS}`} href={SECONDARY_PAGE_URL}>CHANGE_ME SECONDARY_LINK</a>
+                <Link
+                    id={'engineering-link'}
+                    className={`${cb}__link ${menuCSS}`}
+                    to={ENGINEERING_URL}
+                    onClick={() => setMenuOpen(false)}
+                >
+                    AUDIO ENGINEERING
+                </Link>
+                <Link
+                    id={'engineering-link'}
+                    className={`${cb}__link ${menuCSS}`}
+                    to={TRANSFER_URL}
+                    onClick={() => setMenuOpen(false)}
+                >
+                    AUDIO TRANSFER & RESTORATION
+                </Link>
+                <Link
+                    id={'repair-link'}
+                    className={`${cb}__link ${menuCSS}`}
+                    to={EQUIPMENT_URL}
+                    onClick={() => setMenuOpen(false)}
+                    >
+                    AUDIO EQUIPMENT REPAIR
+                </Link>
+                <Link
+                    id={'contact-link'}
+                    className={`${cb}__link ${menuCSS}`}
+                    to={CONTACT_URL}
+                    onClick={() => setMenuOpen(false)}
+                >
+                    INQUIRIES
+                </Link>
             </div>
         </div>
     )

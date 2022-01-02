@@ -14,6 +14,7 @@ module.exports = {
     globals: {
         Atomics: 'readonly',
         SharedArrayBuffer: 'readonly',
+        process: 'readonly'
     },
     parser: 'babel-eslint',
     parserOptions: {
@@ -37,9 +38,11 @@ module.exports = {
             }
         },
         {
-            files: ['*.spec.js'],
+            files: ['cypress/integration/*.spec.js', 'cypress/page/*.js'],
             rules: {
-                'jest/expect-expect': 'off'
+                'jest/expect-expect': 'off',
+                'jest/no-identical-title': 'off',
+                'jest/valid-expect': 'off'
             }
         }
     ],

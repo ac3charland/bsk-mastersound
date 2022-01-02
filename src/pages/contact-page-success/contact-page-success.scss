@@ -1,0 +1,40 @@
+@import "../../globals.scss";
+
+.contact-success {
+  // TODO need to fix background image bug - shrink page vertically & scroll down--image doesn't scale
+  min-height: 100vh;
+  text-align: center;
+  background-image: url("../../images/contact.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: white;
+  flex: 1;
+  position: relative;
+
+  max-width: 100%;
+
+  &__heading {
+    font-weight: 900;
+    font-size: $font-size-h1;
+  }
+
+  &__sub-heading {
+    margin-top: 20rem;
+    font-size: $font-size-h3;
+  }
+
+  &__flex {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    bottom: 0;
+    margin-top: 15rem;
+    justify-content: space-between;
+  }
+
+  &__page-content {
+    flex-grow: 2;
+  }
+}
