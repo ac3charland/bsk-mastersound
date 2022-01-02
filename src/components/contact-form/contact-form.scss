@@ -17,14 +17,16 @@
     }
 
     &__form-element {
+        position: relative;
         display: flex;
         flex-direction: column;
+        padding-bottom: 2.5rem;
     }
 
     &__label {
         text-align: left;
         font-size: $font-size-h3;
-        margin-top: 2rem;
+        margin-top: 1rem;
         margin-bottom: 0.5rem;
     }
 
@@ -37,14 +39,12 @@
     }
 
     &__submit-wrapper {
-        margin-top: 4rem;
-        margin-bottom: 2rem;
+        margin: 2rem 0;
     }
 
     &__submit {
         font-size: $font-size-h3;
         padding: 1.5rem;
-        margin-top: 2rem;
         border-radius: 10px;
         border: none;
         font-family: $sans-serif;
@@ -70,6 +70,9 @@
     }
 
     &__error {
-        margin-top: 2rem;
+        position: absolute;
+        text-align: center;
+        bottom: 0;
+        width: 100%;
     }
 }
