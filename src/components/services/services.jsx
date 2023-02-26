@@ -1,6 +1,5 @@
 import React from 'react'
-import {Link} from 'react-router-dom'
-import {CONTACT_URL, SERVICES_SECTION_ID, HOME_SERVICES} from '../../utils/constants'
+import {SERVICES_SECTION_ID, HOME_SERVICES, CONTACT_URL} from '../../utils/constants'
 
 import './services.scss'
 
@@ -19,7 +18,7 @@ const Services = () => (
             <div className={`${cb}__services-wrapper`}>
                 {HOME_SERVICES.map((service, idx) => (
                     <div key={service + idx} className={`${cb}__service-wrapper`}>
-                        <Link to={`${CONTACT_URL}?subject=${service}`} className={`${cb}__link`}>{service.toUpperCase()}</Link>
+                        <a className={`${cb}__link`} href={`${CONTACT_URL}?subject=Re: ${service}`}>{service.toUpperCase()}</a>
                     </div>
                 ))}
             </div>
