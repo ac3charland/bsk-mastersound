@@ -4,6 +4,7 @@ import configureStore from 'redux-mock-store'
 import thunk from 'redux-thunk'
 import {MemoryRouter} from 'react-router'
 import {Link} from 'react-router-dom'
+import {CONTACT_URL} from '../../utils/constants'
 
 const cb = 'navbar'
 const mockStore = configureStore([thunk])
@@ -31,7 +32,7 @@ describe('NavBar', () => {
         expect(component.find(`.${cb}__link`).find(Link).at(0).prop('to')).toEqual('/audio-engineering')
         expect(component.find(`.${cb}__link`).find(Link).at(1).prop('to')).toEqual('/audio-transfer')
         expect(component.find(`.${cb}__link`).find(Link).at(2).prop('to')).toEqual('/audio-equipment')
-        expect(component.find(`.${cb}__link`).find(Link).at(3).prop('to')).toEqual('/contact')
+        expect(component.find(`.${cb}__link`).find('a').at(3).prop('href')).toEqual(CONTACT_URL)
     })
 
     it('toggles between open and closed', () => {

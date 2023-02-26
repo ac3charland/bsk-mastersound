@@ -1,5 +1,4 @@
 // Internal URLs
-export const CONTACT_URL = '/contact'
 export const CONTACT_SUCCESS_URL = '/contact/success'
 export const ENGINEERING_URL = '/audio-engineering'
 export const EQUIPMENT_URL = '/audio-equipment'
@@ -8,55 +7,58 @@ export const API_NAME = 'backend'
 export const CONTACT_ROUTE = '/contact'
 export const EVENTS_ROUTE = '/events'
 
+// Contact URLs
+export const CONTACT_URL = 'https://tinyurl.com/47d4v6uj'
+
+
 // Services
 export const HOME_SERVICES = [
-    'Studio Recording',
-    'Live Recording',
-    'Mixing',
-    'Mastering',
-    'Tape Machine Cleaning',
-    'Tape Machine Restoration',
-    'Tape Machine Calibration',
-    'Turntable Setup',
-    'Audio Format Transfer',
-    'Audio Restoration',
+  'Studio Recording',
+  'Live Recording',
+  'Mixing',
+  'Mastering',
+  'Tape Machine Cleaning',
+  'Tape Machine Restoration',
+  'Tape Machine Calibration',
+  'Turntable Setup',
+  'Audio Format Transfer',
+  'Audio Restoration',
 ]
 
 export const ENGINEERING_SERVICES = [
-    'End-to-End Audio Production',
-    'Studio Recording',
-    'Live Show & On Location Recording',
-    'Overdub Existing Material',
-    'Mix Existing Material',
-    'Master to CD',
-    'Master to LP',
-    'Master to Cassette',
-    'Master to Hi-Res File',
+  'End-to-End Audio Production',
+  'Studio Recording',
+  'Live Show & On Location Recording',
+  'Overdub Existing Material',
+  'Mix Existing Material',
+  'Master to CD',
+  'Master to LP',
+  'Master to Cassette',
+  'Master to Hi-Res File',
 ]
 
 export const EQUIPMENT_SERVICES = [
-    'Tape Machine Cleaning',
-    'Tape Machine Restoration',
-    'Tape Machine Calibration',
-    'Turntable Setup',
-    'Turntable Cartridge Alignment',
-    'Other Audio Equipment Repair',
+  'Tape Machine Cleaning',
+  'Tape Machine Restoration',
+  'Tape Machine Calibration',
+  'Turntable Setup',
+  'Turntable Cartridge Alignment',
+  'Other Audio Equipment Repair',
 ]
 
 export const TRANSFER_SERVICES = [
-    'Tape Baking',
-    'LP Transfer',
-    'Cassette Transfer',
-    'Open Reel Transfer',
-    'DTRS Transfer',
-    'Other Format Transfer',
+  'Tape Baking',
+  'LP Transfer',
+  'Cassette Transfer',
+  'Open Reel Transfer',
+  'DTRS Transfer',
+  'Other Format Transfer',
 ]
 
 // External URLs
 export const ALEX_PORTFOLIO_URL = 'https://www.alexcharland.com/'
 export const GOOGLE_PRIVACY_POLICY = 'https://policies.google.com/privacy'
 export const GOOGLE_TERMS = 'https://policies.google.com/terms'
-
 
 // Section IDs
 export const BIO_SECTION_ID = 'BIO_SECTION_ID'

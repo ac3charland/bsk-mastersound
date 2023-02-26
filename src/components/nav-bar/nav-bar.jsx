@@ -50,14 +50,7 @@ const NavBar = () => {
                     >
                     AUDIO EQUIPMENT REPAIR
                 </Link>
-                <Link
-                    id={'contact-link'}
-                    className={`${cb}__link ${menuCSS}`}
-                    to={CONTACT_URL}
-                    onClick={() => setMenuOpen(false)}
-                >
-                    INQUIRIES
-                </Link>
+                <a className={`${cb}__link`} href={CONTACT_URL}>INQUIRIES</a>
             </div>
         </div>
     )

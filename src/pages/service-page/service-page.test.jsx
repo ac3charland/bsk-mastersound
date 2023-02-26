@@ -2,7 +2,7 @@ import ServicePage from './service-page'
 import configureStore from 'redux-mock-store'
 import thunk from 'redux-thunk'
 import {Provider} from 'react-redux'
-import {MemoryRouter, Link} from 'react-router-dom'
+import {MemoryRouter} from 'react-router-dom'
 
 const cb = 'service'
 const mockStore = configureStore([thunk])
@@ -36,10 +36,10 @@ describe('ServicePage', () => {
 
     it('renders the services passed to it with the correct links', () => {
         const component = render()
-        expect(component.find(Link).length).toEqual(3)
-        expect(component.find(Link).at(0).prop('to')).toEqual('/contact?subject=Maury aka Maurice')
-        expect(component.find(Link).at(1).prop('to')).toEqual('/contact?subject=Connie-Bonnie')
-        expect(component.find(Link).at(2).prop('to')).toEqual('/contact?subject=Rick')
+        expect(component.find('a').length).toEqual(4)
+        expect(component.find('a').at(0).prop('href')).toEqual('https://tinyurl.com/47d4v6uj?subject=Re: Maury aka Maurice')
+        expect(component.find('a').at(1).prop('href')).toEqual('https://tinyurl.com/47d4v6uj?subject=Re: Connie-Bonnie')
+        expect(component.find('a').at(2).prop('href')).toEqual('https://tinyurl.com/47d4v6uj?subject=Re: Rick')
     })
 
     it('displays the copy component prop and title', () => {
